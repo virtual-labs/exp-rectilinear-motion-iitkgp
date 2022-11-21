@@ -111,27 +111,76 @@
 	</style>
   </head>
 
-  <body class="d-flex flex-column min-vh-100" >
+   <body class="d-flex flex-column min-vh-100" >
   <div class="content-wrapper">
   <!-----------------------Main Circuit Connection----------------------------------------->
    <div class="container-fluid">
 <div class="row" >
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
-<img id="headerlogo"  style="height:52%;width:100%;"src="images/logo.jpg "/>
+<img id="headerlogo"   src="images/logo.jpg "/>
 <h3 class="text-center"><b>Study of Rectilinear motion control system</b></h3>
+  </div></div>  
+  <!------current edit------>
+  <div class="row " >
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<!------ Dropdown Hover---------------------->
+	<div class="dropdown" style="position:relative;top:70px;right:-100px;width:500px;height:200px ">
+  <p style="color:#B3061D"><b>INSTRUCTIONS</b></p>
+  <div class="dropdown-content" style="color:#025167; height:500px;overflow-y:auto;">
+  <ol type="1">
+  <li>Drag weights(brown coloured boxes)and drop them in the white line boxes in the mass carriage system(for ex. Drag the uppermost weight and put it in the lowermost white box).Each of the weights are of 500g.First drag all the weights (i.e. select 2kg mass).</li></br>
+  
+  <li>Click on 'Trajectory' from command tab under 'Controls',then click on step.After that click on 'Setup', put step size to zero,set dwell time to 3000 ms and 1 repeatation .Select 'Open loop step' and 'Ok' to observe open loop step response for 2kg mass.</li><br/>
+ 
+ <li> Click on "Setup Data Aquisition" under 'Data' tab, put 2 as the value of servo cycles .</li></br>
+
+  <li>Drag the mass carriage system through the slider upto -2.5cm. </li><br/> 
+
+<li>Click on 'Execute' under 'command',then click on 'RUN' button.The system starts to oscillate.</li><br/>
+
+<li>After the carriage stops oscillating,an alert massage will be shown.Click on 'Ok'.</li></br>
+
+<li>Click on 'Set up Plot' under 'Plotting'. Select 'Encoder Position' and click 'ok'</li>    </br>
+
+<li> Click on 'Plot data' under 'Plotting' ,the 'Open loop step' response for the particuler mass chosen will be shown.</li></br>
+ 
+<li>Click on 'Reset Controller' under 'Utility' tab to observe response for unloaded mass choosing no weights and following the above steps.</li><br/>
+<li>Under 'Calculation' tab select 'Without Damper',enter both the mass values chosen(for ex. here the first mass was 2kg and second one is 0kg) and click on 'Simulate' to have the values of Mc(weight of the carriage) and K(spring constant).</li><br/>
+
+ <li>Now click on 'Connect Dashpot' button to connect the dashpot to our mass carriage system.</li><br/>
+ 
+ <li>Similerly drag 2kg weight again and follow the above steps to observe open loop step response of the mass carriage system with connected dashpot.</li><br/>
+ 
+ <li>Under 'Calculation' tab select 'With Damper',enter the mass value chosen(for ex. here the mass was 2kg) and click on 'Simulate' to have the value of C(Dashpot damping coefficient).</li><br/>
+ 
+ <li> To observe system velocity first remove dashpot from the mass carriage system by clicking on 'remove dashpot' button. Now secure 2kg mass in the carriage.</li><br/>
+ 
+ <li>Steps will be same, as said before with some following edits. In step 2 set dwell Time to 75 ms and repeatation 2 and in step 4 Drag the mass carriage system through the slider upto -3cm.   </li>
+ </br>
+ <li>In step 7 Select 'Encoder Velocity' and click 'ok'</li><br/>
+ 
+ <li>Calculate acceleration (for both positive & negative slope) using formula (velocity difference/ time difference).</li><br/>
+ 
+ <li> Under 'Calculation'tab select 'Gain Calculation'.Enter the acceleration values from positive slope and negative slope of velocity vs. time plot. Click on 'Simulate'.
+ 
+  </ol>	
+  </div>
   </div></div>
+  </div><!------end of instruction code-----> 
+  
+ <!------current edit------>
  
  <div class="row  ">
-<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-  <img id="img" src="Mass_Dashpot/ULmassd/0.jpg "/>
-  
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+
+  <img  id="img" src="Mass_Dashpot/ULmassd/0.jpg"/>  
    <!--div for droppable divs-->
-  <div id= "weights" style="display:none;position:absolute;top:10px; left:0px">
+  <div id= "weights" class="w-auto h-auto card card-body" style="display:none;position:absolute;top:180px; left:-15px">
   <div id="div1" style="position:relative;top:440px; left:210px" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
 <div id="div2" style="position:relative;top:410px; left:210px" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
 <div id="div3" style="position:relative;top:354px; left:210px" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
 <div id="div4" style="position:relative;top:300px; left:210px" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br>
-</div>  
+</div>   
   
 <input id="valR" type="range" min="-3" max="3" value="0" step="0.5" style="display:none" oninput="showVal1(this.value)" onchange="showVal1(this.value)" onmouseover="hover(this.value)" />
    <input id="valR2" type="range" min="-3" max="3" value="0" step="0.5"  style="display:block" oninput="showVal2(this.value)" onchange="showVal2(this.value)" onmouseover="hover(this.value)" />
@@ -142,8 +191,8 @@
 	<span id="range" style="display:block">0</span>
 </div>
 
-<div class="col-xs-8 col-sm-10 col-md-15 col-lg-2 ">
-<div id= "drop"    style="display:block;position:relative;top:100px; left:100px; width:150px;height:200px">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+<div id= "drop" class="w-auto car card-body"   style="display:block;position:relative;top:100px; left:120px; width:150px;height:200px">
 <p>Weights</p><p> (Each of 500g)</p>
 
 <img id="drag1"  src="img_weight0.5.png"   draggable="true" ondragstart="drag(event)" width="100" height="15" onmouseover="showweights()" onmouseout="hideweights()"><br>
@@ -154,7 +203,7 @@
 </div></div>
 
 
-<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
 <h2 style="text-align:center; position:relative; top:100px; left:50px;font-size:25px;"><b>Controls</b></h2>
 	<div style="text-align:center; position:relative; top:100px; left:120px; width:450px; height:250px; margin-top:auto; border: 3px solid blue; border-radius: 10px;">    
   
@@ -243,50 +292,7 @@
 
 
 
-<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-<!------ Dropdown Hover---------------------->
-	<div class="dropdown" style="position:relative;top:70px;right:-100px;width:500px;height:200px ">
-  <p style="color:#B3061D"><b>INSTRUCTIONS</b></p>
-  <div class="dropdown-content" style="color:#025167;height:500px;overflow-y:auto;">
-  <ol type="1">
-  <li>Drag weights(brown coloured boxes)and drop them in the white line boxes in the mass carriage system(for ex. Drag the uppermost weight and put it in the lowermost white box).Each of the weights are of 500g.First drag all the weights (i.e. select 2kg mass).</li></br>
-  
-  <li>Click on 'Trajectory' from command tab under 'Controls',then click on step.After that click on 'Setup', put step size to zero,set dwell time to 3000 ms and 1 repeatation .Select 'Open loop step' and 'Ok' to observe open loop step response for 2kg mass.</li><br/>
- 
- <li> Click on "Setup Data Aquisition" under 'Data' tab, put 2 as the value of servo cycles .</li></br>
 
-  <li>Drag the mass carriage system through the slider upto -2.5cm. </li><br/> 
-
-<li>Click on 'Execute' under 'command',then click on 'RUN' button.The system starts to oscillate.</li><br/>
-
-<li>After the carriage stops oscillating,an alert massage will be shown.Click on 'Ok'.</li></br>
-
-<li>Click on 'Set up Plot' under 'Plotting'. Select 'Encoder Position' and click 'ok'</li>    </br>
-
-<li> Click on 'Plot data' under 'Plotting' ,the 'Open loop step' response for the particuler mass chosen will be shown.</li></br>
- 
-<li>Click on 'Reset Controller' under 'Utility' tab to observe response for unloaded mass choosing no weights and following the above steps.</li><br/>
-<li>Under 'Calculation' tab select 'Without Damper',enter both the mass values chosen(for ex. here the first mass was 2kg and second one is 0kg) and click on 'Simulate' to have the values of Mc(weight of the carriage) and K(spring constant).</li><br/>
-
- <li>Now click on 'Connect Dashpot' button to connect the dashpot to our mass carriage system.</li><br/>
- 
- <li>Similerly drag 2kg weight again and follow the above steps to observe open loop step response of the mass carriage system with connected dashpot.</li><br/>
- 
- <li>Under 'Calculation' tab select 'With Damper',enter the mass value chosen(for ex. here the mass was 2kg) and click on 'Simulate' to have the value of C(Dashpot damping coefficient).</li><br/>
- 
- <li> To observe system velocity first remove dashpot from the mass carriage system by clicking on 'remove dashpot' button. Now secure 2kg mass in the carriage.</li><br/>
- 
- <li>Steps will be same, as said before with some following edits. In step 2 set dwell Time to 75 ms and repeatation 2 and in step 4 Drag the mass carriage system through the slider upto -3cm.   </li>
- </br>
- <li>In step 7 Select 'Encoder Velocity' and click 'ok'</li><br/>
- 
- <li>Calculate acceleration (for both positive & negative slope) using formula (velocity difference/ time difference).</li><br/>
- 
- <li> Under 'Calculation'tab select 'Gain Calculation'.Enter the acceleration values from positive slope and negative slope of velocity vs. time plot. Click on 'Simulate'.
- 
-  </ol>	
-  </div>
-  </div></div>
   </div><!--End of 1st row-->
   
   <div class="row  ">

@@ -876,7 +876,7 @@ document.getElementById('exportVelocityChart').style.display="block";
 
 function removeDashpot(){
 	
-	 window.location.assign("Rectilinear without damper.html");
+	 window.location.assign("index.html");
 }
 
 
