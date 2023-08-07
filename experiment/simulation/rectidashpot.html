@@ -17,7 +17,7 @@
   
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script  src="js/Recti_simu.js"></script>  
+  <script  src="js/Recti_dashpot.js"></script>  
 	
  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"></script>
@@ -27,7 +27,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
   
- 
+  
   <style>
   
 #anim{display:-webkit-box;-webkit-box-pack:center;opacity:1.5; duration: 4;}
@@ -63,14 +63,13 @@ min-width:230px;
 min-height:1px;
 text-align:center;
 
-
 }  
-  
- .img-container {
+.img-container {
     display: inline-block;
     position: relative;
 }
- 
+  
+  
   
   </style>
     
@@ -190,8 +189,8 @@ text-align:center;
                  <li> Under 'Calculation' tab select 'Gain Calculation'. Enter the acceleration values from positive slope and negative slope of velocity vs. time plot. Click on 'Simulate' button.
    
       </ol>
-    </div>
-	</p> 
+  </div>
+  </p> 
           </div>
         <div class="col-md-1"></div>
       </div>
@@ -209,9 +208,8 @@ text-align:center;
  
  <div class="row">
  <div class="col-md-6">
- 
  <div class ="img-container">
-  <img class="img-fluid " id="img" src="ULmass/0.jpg "/><!--div for droppable divs-->
+  <img class="img-fluid " id="img" src="Mass_Dashpot/ULmassd/0.jpg "/><!--div for droppable divs-->
   
         <!--<div class=" p-2 text-center" id= "weights" style="display:block;position:absolute;top:0%;left:0%;width:100%;height:100%;z-index:1;">-->
 				<div class=" p-2" id="div4" ondrop="drop(event);hideweights()" ondragover="allowDrop(event)" style="display:block;position:absolute;top:27%;left:41%;width:23%;height:6%;" ></div>
@@ -226,8 +224,7 @@ text-align:center;
    <input id="valR3" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none" oninput="showVal3(this.value)" onchange="showVal3(this.value);hideweights()" onmouseover="hover(this.value)" />
    <input id="valR4" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none" oninput="showVal4(this.value)" onchange="showVal4(this.value);hideweights()" onmouseover="hover(this.value)" />
    <input id="valR5" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none" oninput="showVal5(this.value)" onchange="showVal5(this.value);hideweights()" onmouseover="hover(this.value)" />
-   <br/>
-   <span class="w-auto text-center" id="range" style="display:block;float:left;">0</span>  
+   <br/><span class="w-auto text-center" id="range" style="display:block;float:left;">0</span>  
   
   </div><!--end of second row first column -->
   
@@ -290,7 +287,7 @@ text-align:center;
 	<!-------------------Button end-------------------------->
     
     <br><div class="w-auto p-2 my-1 text-center" style="background-color:powderblue; font-size:20px; color:black;border:1px dotted black;">Apparatus:Linear inertia Model 210</div>
-	<div class="w-auto p-2 my-1 text-center" style="background-color:powderblue;  font-size:20px; color:black;  border:1px dotted black;">Encoder Position counts: <input class="text-center" id="slider" type="number" min="0000" max="6000" value="0000" style="background-color:yellow;" ><br> </div>
+	<div class="w-auto p-2 my-1 text-center" style="background-color:powderblue;  font-size:20px; color:black;  border:1px dotted black;">Encoder Position counts: <input class="text-center" id="slider" type="number" min="0000" max="6000" value="0000" style="background-color:yellow; " ><br> </div>
 	<div class="w-auto p-2 my-1 " style="background-color:powderblue;  font-size:20px; color:black;  border:1px dotted black;">Control Loop Status: <span id="status">CLOSED </span></div>
 	
 	<p class= "text-center">Ts is set as 0.00442</p> 
@@ -303,12 +300,12 @@ text-align:center;
   <div class="btn-group">
   <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Calculations</button>
   <ul class="dropdown-menu">
-  <li><a class="dropdown-item" onclick="show_WDBox()">Without Damper</a></li>
-  <li><a class="dropdown-item" href="#">With Damper</a></li>
-  <li><a class="dropdown-item" onclick="showGain()"> Gain Calculation</a></li>
+  <li><a class="dropdown-item" href="#">Without Damper</a></li>
+  <li><a class="dropdown-item" onclick="show_DBox()">With Damper</a></li>
+  
   </ul>
   </div>
- <button id="gotodashpot" class="btn btn-primary"  onclick="connectDashpot()" >Connect Dashpot</button>
+ <button id="gotodashpot" class="btn btn-primary"  onclick="removeDashpot()" >Remove Dashpot</button>
 	
 </div><!-- end of 1st row 2nd column-->
 </div><!--- end of first row----->
@@ -317,12 +314,11 @@ text-align:center;
         <div class="col-md-1"></div>
         <div class="col-md-5">
 		<!---code start here----->
-		
-		<div class="p-2 gy-4 text-center" id= "bricks" style="display:block;width:36%;height:96%">
-<span class="w-auto text-center">Weights(each of 500g):</span><br/>
+		<div class="p-2 gy-4 text-center" id= "drop" style="display:block;width:30%;height:20%">
+<span class="w-auto text-center">Weights</span>(Each of 500g):
 <img class="img-fluid" id="drag1"  src="img_weight0.5.png"   draggable="true" ondragstart="drag(event)"  onmouseover="showweights()" ><br>
 <img class="img-fluid"id="drag2"  src="img_weight1.png" draggable="true" ondragstart="drag(event)"  onmouseover="showweights()" ><br>
-<img class="img-fluid"id="drag3"  src="img_weight1.5.png" draggable="true" ondragstart="drag(event)"  onmouseover="showweights()"><br>
+<img class="img-fluid"id="drag3"  src="img_weight1.5.png" draggable="true" ondragstart="drag(event)"  onmouseover="showweights()" ><br>
 <img class="img-fluid"id="drag4"  src="img_weight2.png" draggable="true" ondragstart="drag(event)"  onmouseover="showweights()" >
 
 </div>
@@ -351,12 +347,11 @@ text-align:center;
 
 <div class="w-auto p-2 my-1" id="dataAquisition" style="display:none;text-align:center; margin-top:auto; border: 10px solid #0d6efd; border-radius: 10px;">
 	 <span class="w-auto text-center" >Setup Data Acquisition</span><br/><br/>
-	&nbsp;&nbsp; &nbsp;&nbsp; <span class="w-auto text-center"> Selected items:</span><br/>
- <input class="w-auto text-center"  type="radio" >Encoder Position<br/>
- <input class="w-auto text-center" type="radio" >Encoder Velocity<br/>
+	&nbsp;&nbsp; &nbsp;&nbsp; <span class="w-auto text-center"> Selected items:</span>
+	&nbsp; &nbsp; <span class="w-auto text-center">Encoder Position</span><br/><br/>
 	&nbsp; &nbsp;<input class="w-auto text-center" type="number" id="servo" min="1" max="10" value="2" >Sample Period(servo Cycle)<br/><br/>
 	<button type="button" class="btn btn-primary" onclick="stopdata()">Ok</button>
-	</div>	
+	</div>		
 <div class="w-auto p-2 my-1" id="Execute" style="display:none; margin-top:auto; border: 10px solid #0d6efd; border-radius: 10px;">
 <span class="w-auto text-center" style="text-align:center">Selected trajectory:</span></br>
 <span class="w-auto text-center"style="text-align:left;color:blue;">Open loop Step</span><br>
@@ -372,35 +367,21 @@ text-align:center;
 <span class="w-auto text-center"><b>Plot Configuration</b></span>
 <span class="w-auto text-center"><b>Selection</b></span></br></br>
 <input class="w-auto text-center" id="position" type="radio" name='plotting'value='position'>Encoder Position<br>
-<input class="w-auto text-center"id="velocity" type="radio" name='plotting'value='velocity'>Encoder Velocity<br>
+<!--<input class="w-auto text-center"id="velocity" type="radio" name='plotting'value='velocity'>Encoder Velocity<br>-->
 <button  type="button" class="btn btn-primary" onclick="stopplot()"style="display:block ;">OK</button><br>
 </div>
 
-<div class="w-auto p-2 my-1" id="WDBox" style="display:none;margin-top:auto; border: 10px solid #0d6efd; border-radius: 10px;background-color:#ffffb3">
-  <h1 class="w-auto text-center"style="font-size:20px">Calculations for M<sub>c</sub> & K </h1>
-  <input class="w-auto text-center"type="number" id="mass1" min="0" step="0.5" max="2" value="0.5" >choose mass1<br/><br>
-  <input class="w-auto text-center"type="number" id="mass2" min="0" step="0.5" max="2" value="0.5" >choose mass2<br/><br>
-  <input class="w-auto text-center"type="number" id="MC" value="0" readonly="readonly">Value of Mass carriage(M<sub>c</sub>)(kg)<br><br>
-  <input class="w-auto text-center"type="number" id="K" value="0" readonly="readonly">Value of Spring Constant(K)(N/m)<br><br>
-  <input class="w-auto text-center"type="number" id="wn1" value="0" readonly="readonly">Value of W<sub>n</sub>1 in rad/sec<br><br>
-  <input class="w-auto text-center"type="number" id="wn2" value="0" readonly="readonly">Value of W<sub>n</sub>2 in rad/sec<br><br>
-  <input class="w-auto text-center"type="number" id="zeta" value="0" readonly="readonly">Average Value of damping ratio(ζ)(negligible)<br/><br/>
-  <button type="button" class="btn btn-primary"  onclick="Simulate1() ">Simulate</button>
-  <button type="button" class="btn btn-primary"  onclick="hide_WDBox()" >OK</button>  
+<div class="w-auto p-2 my-1" id="DBox" style="display:none;margin-top:auto; border: 10px solid #0d6efd; border-radius: 10px;background-color:#ffffb3">
+  <h1 class="w-auto text-center"style="font-size:20px">Calculations for dashpot damping(damping Coefficient C)</h1>
+  <input class="w-auto text-center"type="number" id="mass" min="0" step="0.5" max="2" value="0.5" >choose mass<br/><br/><br/><br/>
+  
+  <input class="w-auto text-center"type="number" id="wn" value="0" readonly="readonly">Value of W<sub>n</sub> in rad/sec<br><br>
+  <input class="w-auto text-center"type="number" id="zeta" value="0" readonly="readonly">Damping ratio(&zeta;)<br/><br/>
+  <input class="w-auto text-center"type="number" id="C" value="0" readonly="readonly">Damping Coefficient(C)<br/><br/>
+  <button type="button" class="btn btn-primary"  onclick="Simulate2() ">Simulate</button>
+  <button type="button" class="btn btn-primary"  onclick="hide_DBox()" >OK</button>  
   </div>
 
-<div class="w-auto p-2 my-1"id="GainBox" style="display:none; margin-top:auto; border: 10px solid #0d6efd; border-radius: 10px;background-color:#ffffb3">
-  <h1 class="w-auto text-center" style="font-size:20px">Calculations for Hardware Gain K<sub>hw</sub></h1>
-  <input class="w-auto text-center" type="number" id="ac1" min="0.0" step="0.5" value="0.0" >Enter Positive slope acceleration<br/><br>
-  <input class="w-auto text-center"type="number" id="ac2" min="0.0" step="0.5" value="0.0" >Enter Negative slope acceleration<br/><br>
-  <input class="w-auto text-center"type="number" id="acavg" value="0" readonly="readonly">Value of average acceleration:<br><br>
-  <input class="w-auto text-center"type="number" id="hwgain" value="0" readonly="readonly">Approximate Value of Hardware Gain(K <sub>hw</sub>)<br/><br/>
-  <button type="button" class="btn btn-primary"  onclick="SimulateGain()">Simulate</button>
-  <button type="button" class="btn btn-primary"  onclick="hideGain()">OK</button>  
-  </div>
-
-<!---code start here----->
-					
 
 
 
@@ -410,6 +391,7 @@ text-align:center;
 </div><!---end of 2nd row 2nd col--->
 <div class="col-md-1"></div>
 </div>
+
 
 
 <div class="row"><!----starting second row----->
@@ -424,6 +406,7 @@ text-align:center;
 </div>
 <div class="col-md-1"></div>
 </div>
+
 
 
 
