@@ -7,14 +7,21 @@
 <b>Discipline | <b> Electrical Engineering 
 :--|:--|
 <b> Lab | <b> **Control and Instrumentation Lab**
-<b> Experiment|     <b> **Study of Rectilinear motion control systems and Experiment 1**
+<b> Experiment|     <b> **Study of Rectilinear Motion and Experiment 1**
 
 
 ### About the Experiment 
+**System description**
 
-Rectilinear motion is another name for straight-line motion. This type of motion describes the movement of a particle or a body.The experimental control system in practical laboratory is comprised of the electromechanical plant which consists of the spring/mass mechanism, its actuator and sensors and a subsystem 
-i.e. the executive program which runs on a PC under the DOS or Windows operating system.&nbsp;
-This experiment use (encoder) Counts as the system units of position.
+Rectilinear motion is another name for straight-line motion. This type of motion describes the movement of a particle or a body. The experimental control system in practical laboratory is comprised of the electromechanical plant which consists of the spring/mass mechanism, its actuator, sensors and a subsystem 
+i.e. an operating program or software which runs on a PC . This experiment use (encoder) counts as the system units of position, where the counts correspond to the encoder pulses and controller-internal register values.
+								
+								
+<div alig="center">
+<img class="img-fluid"  src="./images/plant.png" alt="">
+
+<b>Figure 1: Schematic representation of the Rectilinear Motion setup in Control Systems </b>
+</div>
 
 <b>Name of Developer | <b> **Prof. Alok Kanti Deb**
 :--|:--|
@@ -27,4 +34,4 @@ This experiment use (encoder) Counts as the system units of position.
 
 SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
-1 | **Piyali Chattopadhyay** | Developer & Integration | Research Engineer | Department of Electrical Engineering | IIT Kharagpur | 
+1 | **Piyali Chattopadhyay** | Developer & Integration | Project Scientist | Department of Electrical Engineering | IIT Kharagpur | 
