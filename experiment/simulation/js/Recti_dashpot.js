@@ -9,7 +9,7 @@ function imchange(select){
 	document.getElementById('valR2').style.display="block";
 	document.getElementById('range').style.display="block";
 	document.getElementById('run0kg').style.display="block";
-	document.getElementById('weights').style.display="none";
+	//document.getElementById('weights').style.display="none";
 	}
 	else{
 		document.getElementById('valR2').style.display="none";
@@ -21,7 +21,7 @@ function imchange(select){
 	document.getElementById('valR').style.display="block";
 	document.getElementById('range').style.display="block";
 	document.getElementById('run2kg').style.display="block";
-	document.getElementById('weights').style.display="none";
+	//document.getElementById('weights').style.display="none";
 	}
 	else{
 	document.getElementById('valR').style.display="none";
@@ -33,7 +33,7 @@ document.getElementById('run2kg').style.display="none";
 	document.getElementById('valR3').style.display="block";
 	document.getElementById('range').style.display="block";
 	document.getElementById('run0.5kg').style.display="block";
-	document.getElementById('weights').style.display="none";
+	//document.getElementById('weights').style.display="none";
 	}
 	else{
 	document.getElementById('valR3').style.display="none";
@@ -45,7 +45,7 @@ if(M==1){
 	document.getElementById('valR4').style.display="block";
 	document.getElementById('range').style.display="block";
 	document.getElementById('run1kg').style.display="block";
-	document.getElementById('weights').style.display="none";
+	//document.getElementById('weights').style.display="none";
 	}
 	else{
 	document.getElementById('valR4').style.display="none";
@@ -57,7 +57,7 @@ if(M==1.5){
 	document.getElementById('valR5').style.display="block";
 	document.getElementById('range').style.display="block";
 	document.getElementById('run1.5kg').style.display="block";
-	document.getElementById('weights').style.display="none";
+	//document.getElementById('weights').style.display="none";
 	}
 	else{
 	document.getElementById('valR5').style.display="none";
@@ -70,8 +70,8 @@ document.getElementById('run1.5kg').style.display="none";
 
 
 
-   var val = document.getElementById("valR").value;
-        document.getElementById("range").innerHTML=val;
+   //var val = document.getElementById("valR").value;
+        //document.getElementById("range").innerHTML=val;
 		//var opt = document.getElementById("MASS(kg)").selectedIndex;
 		//For 2kg mass//
                 function showVal1(newVal){
@@ -469,7 +469,7 @@ arr4[7]= new Image();
 arr4[7].src = "Mass_Dashpot/twomassd/0.5.jpg";
 arr4[8]= new Image();
 arr4[8].src = "Mass_Dashpot/twomassd/0.jpg";
-var i=0;
+//var i=0;
 
 //////animation or 1.5 kg mass//////
 var arr5 = [];
@@ -491,7 +491,9 @@ arr5[7]= new Image();
 arr5[7].src = "Mass_Dashpot/threemassd/0.5.jpg";
 arr5[8]= new Image();
 arr5[8].src = "Mass_Dashpot/threemassd/0.jpg";
+
 var i=0;
+
 function slide(){
  document.getElementById("img").src= arr[i].src;
  i++; 
@@ -499,7 +501,7 @@ function slide(){
   i=0;
  }
  setTimeout(function(){ slide(); },40);
- clearTimeout(100); 
+ clearTimeout(25); 
 }
 function slide2(){
  document.getElementById("img").src= arr2[i].src;
@@ -508,7 +510,7 @@ function slide2(){
   i=0;
  }
  setTimeout(function(){ slide2(); },40);
- clearTimeout(100); 
+ clearTimeout(25); 
 }
 function slide3(){
  document.getElementById("img").src= arr3[i].src;
@@ -517,7 +519,7 @@ function slide3(){
   i=0;
  }
  setTimeout(function(){ slide3(); },40);
- clearTimeout(100); 
+ clearTimeout(25); 
 }
 function slide4(){
  document.getElementById("img").src= arr4[i].src;
@@ -526,7 +528,7 @@ function slide4(){
   i=0;
  }
  setTimeout(function(){ slide4(); },40);
- clearTimeout(100); 
+ clearTimeout(25); 
 }
 function slide5(){
  document.getElementById("img").src= arr5[i].src;
@@ -535,7 +537,7 @@ function slide5(){
   i=0;
  }
  setTimeout(function(){ slide5(); },40);
- clearTimeout(100); 
+ clearTimeout(25); 
 }
 
 function EBOX(){
@@ -560,7 +562,7 @@ function RunAnim(){
 	
 document.getElementById("img").style.display="block";
 slide('img',arr);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5000);
+setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 4000);
 document.getElementById("Execute").style.display="none";
 
 }
@@ -581,7 +583,7 @@ function RunAnim2(){
 	
 document.getElementById("img").style.display="block";
 slide2('img',arr2);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5000);
+setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 4000);
 document.getElementById("Execute").style.display="none";
 
 }
@@ -604,7 +606,7 @@ function RunAnim3(){
 	
 document.getElementById("img").style.display="block";
 slide3('img',arr3);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5000);
+setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 4000);
 document.getElementById("Execute").style.display="none";
 
 }
@@ -627,7 +629,7 @@ function RunAnim4(){
 	
 document.getElementById("img").style.display="block";
 slide4('img',arr4);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5000);
+setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 4000);
 document.getElementById("Execute").style.display="none";
 
 }
@@ -651,7 +653,7 @@ function RunAnim5(){
 	
 document.getElementById("img").style.display="block";
 slide5('img',arr5);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5000);
+setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 4000);
 document.getElementById("Execute").style.display="none";
 
 }
@@ -670,14 +672,20 @@ function Resetcontroller(){
   function plotposition() {
 	  
 	var y= new Array();
-var dataPoints=[];	
+var dataPoints=[];
+document.getElementById("plotbucket").style.display="block";
+	  document.getElementById("chartContainer").style.display="block";
+	  document.getElementById("chartContainer2").style.display="none";
+
+var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerHTML)));///in cmeter new edit
+	
       var i= document.getElementById("MASS(kg)").selectedIndex;
 	  var M= parseFloat(document.getElementById("MASS(kg)").options[i].innerHTML);//value.innerHTML);
-	  var mc = 0.866;
+	  var mc = 0.77;
 	  var TM =parseFloat(M+mc);// parseFloat(2.866);//+(M+mc).toFixed(2);
 	  var c = parseFloat(12.563);//zeta value 0.05
 	  var c2 =parseFloat(Math.pow(c,2));
-	  var k = 798; var fk =parseFloat(1/k);
+	  var k = 390; var fk =parseFloat(1/k);
 	  var zeta2 = parseFloat(c2/(4*TM*k));
 	  var zetad = (1-zeta2);
 	  var zetad2 = Math.sqrt(zetad);var fzeta= parseFloat(1/zetad2);
@@ -690,6 +698,11 @@ var dataPoints=[];
 	  var thetaradian = parseFloat(Math.acos(theta)*Math.PI/180);
 	  var wd = parseFloat(wn2 * zetad2);
 	  
+	  var gain = parseFloat(parseFloat(0.691617)*ipvalue);
+	 //alert('gain='+gain);
+	 var hwgain = parseFloat(363.111); 
+	  
+	  
 	 /* <script>
 function myFunction() {
 
@@ -700,13 +713,14 @@ function myFunction() {
 
 	  
 	  
-	  
+	 var dwtime = document.getElementById('dt').value;
+	  var dwsect = parseFloat(parseFloat(dwtime/1000)*2); 
 	 var repvalue = document.getElementById('rep').value;
 	  
 	  //for repeatation 1////////
 	 
 
-	  for(var t=0; t<=(6*repvalue); t+=0.1){
+	  for(var t=0; t<= parseFloat(dwsect*repvalue); t+=0.1){
 		 
 		  var sinepart = parseFloat(wd*t);
 		  var sineadd = sinepart+ thetaradian ;
@@ -714,10 +728,19 @@ function myFunction() {
 		  var scndprt = (fzeta *  Math.exp(-exppart)* Math.sin(sineadd));
 		  var stdyst = parseFloat(1.00);
 		  var substr = (stdyst-scndprt);
-		  y[t]= parseFloat(fk* substr);
-		  var cmcount = parseFloat(2266.28895184);//acc to manual 7.06 cm = 16000 counts, hence 1cm = approx 2266.28895184 counts, hence 10^-3 m = 2266.28895184 counts
+		  //y[t]= parseFloat(fk* substr);
+		  
+		  y[t]= parseFloat(gain*fk* substr*hwgain);
+ 
+		 var cmeter = parseFloat(y[t]/0.691617);
+		var counts = parseFloat(cmeter*2266.288952);
+		  
+		  
+		  
+		  /*var cmcount = parseFloat(2266.28895184);//acc to manual 7.06 cm = 16000 counts, hence 1cm = approx 2266.28895184 counts, hence 10^-3 m = 2266.28895184 counts
 		  var mcount = parseFloat(cmcount * 1000);                                   //hence 1 m = 2266.28895184/10^-3 counts.....or (2266.28895184 * 10^3)counts
-		  var counts = (mcount * y[t]);
+		  var counts = (mcount * y[t]);*/
+		  
 		  dataPoints.push({x:(t), y:(counts)});
 	  
 	  }
@@ -732,7 +755,7 @@ function myFunction() {
       },
 	  
 	  axisX:{
-        interlacedColor: "#E0FDE4",
+        interlacedColor: "#D9D9DA",
         title: "Time(Sec)"
       },
 	  axisY: {
@@ -743,7 +766,7 @@ function myFunction() {
       data: [
       {        
         type: "spline",
-		color:"#49C258",
+		color:"black",
         dataPoints:dataPoints
 		
 		/*[
@@ -786,11 +809,11 @@ function plotvelocity(){
 var dataPoints=[];	
       var i= document.getElementById("MASS(kg)").selectedIndex;
 	  var M= parseFloat(document.getElementById("MASS(kg)").options[i].innerHTML);//value.innerHTML);
-	  var mc = 0.866;
+	  var mc = 0.77;
 	  var TM =parseFloat(M+mc);// parseFloat(2.866);//+(M+mc).toFixed(2);
 	  var c = parseFloat(12.563);//zeta value 0.05
 	  var c2 =parseFloat(Math.pow(c,2));
-	  var k = 798; var fk =parseFloat(1/k);
+	  var k = 390; var fk =parseFloat(1/k);
 	  var zeta2 = parseFloat(c2/(4*TM*k));
 	  var zetad = (1.00-zeta2);
 	  var zetad2 = Math.sqrt(zetad);var fzeta= parseFloat(1/zetad2);
@@ -839,7 +862,7 @@ var dataPoints=[];
       },
 	  
 	  axisX:{
-        interlacedColor: "#E0FDE4",
+        interlacedColor: "#D9D9DA",
         title: "Time(Sec)"
       },
 	  axisY: {
@@ -850,7 +873,7 @@ var dataPoints=[];
       data: [
       {        
         type: "line",
-		color:"#49C258",
+		color:"black",
         dataPoints:dataPoints
 		
       }
@@ -912,11 +935,11 @@ function Simulate2(){
 
 //calculation for Dashpot damping assuming C=12.563 kg.rad/sec///
 var m = parseFloat(document.getElementById('mass').value);
- var mc =parseFloat(0.866);
+ var mc =parseFloat(0.77);
 var TM =(m+mc);
  var c = parseFloat(12.563);
  var c2 =parseFloat(Math.pow(c,2));
- var k = 798; 
+ var k = 390; 
  var zeta2 = parseFloat(c2/(4*TM*k));
   var zeta =( Math.sqrt(zeta2));
  var wn2 = parseFloat(k/TM);
@@ -977,30 +1000,61 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
   if(data == "drag1" && ev.target.id =="div1"){
+	  //green();
 	document.getElementById("MASS(kg)").options[1].selected = 'selected';
      imchange();
+	 document.getElementById('drag1').style.position = "absolute";
+	 document.getElementById('drag1').style.left = 4 +"%";
+	 document.getElementById('drag1').style.top = 0 +"%";
+	  document.getElementById('drag1').style.width = 93 +"%";
+	 document.getElementById('drag1').style.height = 100 +"%";
  } 
  
  else if( data == "drag2" && ev.target.id =="div2"){
 	document.getElementById("MASS(kg)").options[2].selected = 'selected';
      imchange();
+	 document.getElementById('drag2').style.position = "absolute";
+	 document.getElementById('drag2').style.left = 4 +"%";
+	 document.getElementById('drag2').style.top = 0 +"%";
+	 document.getElementById('drag2').style.width = 93 +"%";
+	 document.getElementById('drag2').style.height = 100 +"%";
  } 
  else if( data == "drag3" && ev.target.id =="div3"){
 	document.getElementById("MASS(kg)").options[3].selected = 'selected';
      imchange();
+	 document.getElementById('drag3').style.position = "absolute";
+	 document.getElementById('drag3').style.left = 4 +"%";
+	 document.getElementById('drag3').style.top = 0 +"%";
+	 document.getElementById('drag3').style.width = 93 +"%";
+	 document.getElementById('drag3').style.height = 100 +"%";
  }
  else if( data == "drag4" && ev.target.id =="div4"){
 	document.getElementById("MASS(kg)").options[4].selected = 'selected';
      imchange();
+	 document.getElementById('drag4').style.position = "absolute";
+	 document.getElementById('drag4').style.left = 4 +"%";
+	 document.getElementById('drag4').style.top = 0 +"%";
+	 document.getElementById('drag4').style.width = 93 +"%";
+	 document.getElementById('drag4').style.height = 100 +"%";
  }
  
 }
+
 function showweights(){
-	document.getElementById('weights').style.display="block";
+	//document.getElementById('weights').style.display="block";
+	document.getElementById('div1').style.display="block";
+	document.getElementById('div2').style.display="block";
+	document.getElementById('div3').style.display="block";
+	document.getElementById('div4').style.display="block";
+	
 }
 
 function hideweights(){
-	document.getElementById('weights').style.display="none";
+	//document.getElementById('weights').style.display="none";
+	document.getElementById('div1').style.display="none";
+	document.getElementById('div2').style.display="none";
+	document.getElementById('div3').style.display="none";
+	document.getElementById('div4').style.display="none";
 }
 
 
