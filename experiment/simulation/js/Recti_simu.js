@@ -689,7 +689,7 @@ var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerH
 	  var M= parseFloat(document.getElementById("MASS(kg)").options[i].innerHTML);//value.innerHTML);
 	  var mc = 0.77;
 	  var TM =parseFloat(M+mc);// parseFloat(2.866);//+(M+mc).toFixed(2);
-	  alert(TM);
+	  //alert(TM);
 	  var c = parseFloat(2.1);//zeta value 0.05
 	  var c2 =parseFloat(Math.pow(c,2));
 	  var k = 390; var fk =parseFloat(1/k);
