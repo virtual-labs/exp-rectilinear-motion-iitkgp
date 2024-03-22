@@ -14,6 +14,7 @@ The fig 1 illustrates rectilinear motion for a body.
 							
 The experimental control system in practical laboratory is comprised of the electromechanical plant which consists of the spring-mass mechanism, its actuator and sensors and a subsystem 
 i.e. an operating program or software which runs on a PC.
+
 <b>Encoder:</b>
 
 An encoder is a sensor that converts a positional output into an electronic signal. In this experiment, encoder counts are used as the system units of position, where the counts correspond to the encoder pulses and controller-internal register values. Here, 1 encoder revolution is equivalent to 16,000 encoder counts, which corresponds to 7.06 cm.
@@ -44,47 +45,50 @@ $$\omega_d = \omega_n \sqrt{(1 - \zeta^{2})}$$
 								
 Where,
 								
-m = Total mass (mass of the cart + weights)
+<i style ="font-family:'Bodoni MT';font-size:20px;">m</i> = Total mass (mass of the cart + weights)								
 
-k = Spring constant
+<i style ="font-family:'Bodoni MT';font-size:20px;">k</i> = Spring constant
 
-c = Damping coefficient
+<i style ="font-family:'Bodoni MT';font-size:20px;">c</i> = Damping coefficient
 
-F(t) = Applied force
+<span style ="font-family:'Bodoni MT';font-size:20px;"><i>F</i>(t)</span> = Applied force
 
-X(t) = Time-Varying position of the cart
+<span style ="font-family:'Bodoni MT';font-size:20px;"><i>x</i>(t) </span> = Time varying position of the cart
 
-&omega;<sub>n</sub> = Natural frequency of oscillations
+<i style ="font-family:'Bodoni MT';font-size:20px;">&omega;<sub>n</sub></i> = Natural frequency of oscillations
 
-&omega;<sub>d</sub> = Damped natural frequency of oscillations
-								
-								
+<i style ="font-family:'Bodoni MT';font-size:20px;">&omega;<sub>d</sub></i> = Damped natural frequency of oscillations
+
+	
 <div align = "center">
-<img alt="" src="./images/plot.png" class="img-fluid"></br>
+<img alt="" src="./images/plot.png" class="img-fluid">
+	
 <b>Fig 4: Open loop step plot for 1 kg mass on Mass Spring Damper system without connecting the dashpot</b>
 </div>
+
 <div align = "center">
-<img alt="" src="./images/tpic.png" class="img-fluid"></br>
+<img alt="" src="./images/tpic.png" class="img-fluid">
+	
 <b>Fig 5: Rectilinear Plant</b>
 </div>
 
 								
-The hardware gain, k<sub>hw</sub>,  of the system is comprised of the product: k<sub>hw</sub> = k<sub>c</sub> k<sub>a</sub> k<sub>t</sub> k<sub>mp</sub> k<sub>e</sub> k<sub>ep</sub> <!--k<sub>s</sub>--> 
+The hardware gain, <i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>hw</sub></i>,  of the system is comprised of the product: <i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>hw</sub> = k<sub>c</sub> k<sub>a</sub> k<sub>t</sub> k<sub>mp</sub> k<sub>e</sub> k<sub>ep</sub></i> 
 
 where the theoretical values are:
 
-k<sub>c</sub>, the DAC gain, = 10V / 32,768 DAC counts
+<i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>c</sub></i>, the DAC gain, = 10V / 32,768 DAC counts
 
-k<sub>a</sub>, the Servo Amp gain, = approx 2 (amp/V)
+<i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>a</sub></i>, the Servo Amp gain, = approx 2 (amp/V)
 
-k<sub>t</sub>, the Servo Motor Torque constant =  approx 0.1 (N-m/amp)
+<i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>t</sub></i>, the Servo Motor Torque constant =  approx 0.1 (N-m/amp)
 
-k<sub>mp</sub>, the Motor Pinion pitch radius inverse = 26.25 m-1
+<i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>mp</sub></i>, the Motor Pinion pitch radius inverse = 26.25 m<sup>-1</sup>
 
-k<sub>e</sub>, the Encoder gain, = 16,000 pulses / 2&#960; radians
+<i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>e</sub></i>, the Encoder gain, = 16,000 pulses / 2&#960; radians
 
-k<sub>ep</sub>, the Encoder Pinion pitch radius inverse = 89 m-1
-                              
+<i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>ep</sub></i>, the Encoder Pinion pitch radius inverse = 89 m<sup>-1</sup>
+
 
 						
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								
