@@ -66,6 +66,11 @@ Click on the arrow symbol in the right side on 'Horizontal movement' button to m
 Click on the arrow symbol in the left side on 'Vertical movement' button to move the slope line to the upwards direction.
 Click on the arrow symbol in the right side on 'Vertical movement' button to move the slope line to the downwards direction.
 							 
-19. Under 'Calculation' tab select 'Gain Calculation'. Enter the acceleration values from positive slope and negative slope of velocity vs. time plot. Click on 'Simulate' button.
+18. From those point coordinates calculate positive slope acceleration using formula (velocity difference/ time difference) (explained in procedure section).
+    
+19. Similarly follow steps 16-18 to calculate negative slope acceleration from an assumed negative-sloped linear segment in velocity vs. time plot.
+
+20. Under 'Calculation' tab select 'Gain Calculation'. Enter the acceleration values from positive slope and negative slope of velocity vs. time plot. Click on 'Simulate' button.
+
  					
   
