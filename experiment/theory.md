@@ -8,6 +8,7 @@ The fig 1 illustrates rectilinear motion for a body.
 						   
 <div align = "center">
 <img alt="" src="./images/rectibody.png" class="img-fluid">
+	
 <b>Fig 1: Rectilinear Motion</b>
 </div>
 							
@@ -22,10 +23,12 @@ An encoder is a sensor that converts a positional output into an electronic sign
 
 <div align = "center">
 <img alt="" src="./images/plant.png" class="img-fluid">
+	
 <b>Fig 2: Rectilinear Motion Setup without dashpot connected</b>
 </div>
 <div align="center">
 <img alt="" src="./images/plant2.png" class="img-fluid"><br/>
+	
 <b>Fig 3: Rectilinear Motion Setup with dashpot connected</b>
 <img alt="" src="./images/tfequation.png" class="img-fluid">
 </div>
