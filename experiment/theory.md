@@ -2,35 +2,46 @@
 
  **Rectilinear Motion:**
 				  
-Rectilinear motion is another name of straight-line motion. This type of motion describes the movement of a particle or a body. A body is said to experience rectilinear motion if any two particles of the body travel the same distance along two parallel straight lines. The figures below illustrate rectilinear motion for a body.
+Rectilinear motion is another name of straight-line motion. This type of motion describes the movement of a particle or a body.
+A body is said to experience rectilinear motion if any two particles of the body travel the same distance along two parallel straight lines.
+The fig 1 illustrates rectilinear motion for a body.
 						   
 <div align = "center">
 <img alt="" src="./images/rectibody.png" class="img-fluid">
+<b>Fig 1: Rectilinear Motion</b>
 </div>
 							
-The experimental control system in practical laboratory is comprised of the electromechanical plant which consists of the spring/mass mechanism, its actuator and sensors and a subsystem i.e. an operating program or software which runs on a PC . This experiment use (encoder) counts as the system units of position, where the counts correspond to the encoder pulses and controller-internal register values.
+The experimental control system in practical laboratory is comprised of the electromechanical plant which consists of the spring-mass mechanism, its actuator and sensors and a subsystem 
+i.e. an operating program or software which runs on a PC.
+<b>Encoder:</b>
+
+An encoder is a sensor that converts a positional output into an electronic signal. In this experiment, encoder counts are used as the system units of position, where the counts correspond to the encoder pulses and controller-internal register values. Here, 1 encoder revolution is equivalent to 16,000 encoder counts, which corresponds to 7.06 cm.
 								
-Here, 1 encoder revolution = 16,000 encoder counts = 7.06 cm.
                                                             
-**Rectilinear Motion setup in Control Systems:**
+**Rectilinear Motion Setup in Control Systems:**
 
 <div align = "center">
 <img alt="" src="./images/plant.png" class="img-fluid">
-								
+<b>Fig 2: Rectilinear Motion Setup without dashpot connected</b>
+</div>
+<div align="center">
+<img alt="" src="./images/plant2.png" class="img-fluid"><br/>
+<b>Fig 3: Rectilinear Motion Setup with dashpot connected</b>
 <img alt="" src="./images/tfequation.png" class="img-fluid">
 </div>
+Re arranging the equation (2) and comparing the denominator terms with the characteristics equation of a second order control system we get,
+
+$$s^2 + 2 \zeta \omega_n s + \omega_n^2 = s^2 + \frac{c}{m}s + \frac{k}{m}$$
 								
 $$\omega_n^{2} = \frac{k}{m}$$
-								
-$$\zeta (damping \ ratio) = \frac{c}{2 k m}$$
-								
+
+$$\zeta (damping \ ratio) = \frac{c}{2 \sqrt{k m}}$$
+
 $$\omega_d = \omega_n \sqrt{(1 - \zeta^{2})}$$
 								
 Where,
 								
-m = Total mass ( mass of the cart + weights)
-
-M<sub>c</sub> = Mass of the cart
+m = Total mass (mass of the cart + weights)
 
 k = Spring constant
 
@@ -40,16 +51,20 @@ F(t) = Applied force
 
 X(t) = Time-Varying position of the cart
 
-&omega;<sub>n</sub> = Natural frequency of the system
+&omega;<sub>n</sub> = Natural frequency of oscillations
 
-&omega;<sub>d</sub> = Damped natural frequency of the system
+&omega;<sub>d</sub> = Damped natural frequency of oscillations
 								
-								
-<span style="color:blue">Open loop step plot for 1kg mass on Mass Spring Damper system without connecting the dashpot:</span>
 								
 <div align = "center">
-<img alt="" src="./images/plot.png" class="img-fluid">
+<img alt="" src="./images/plot.png" class="img-fluid"></br>
+<b>Fig 4: Open loop step plot for 1 kg mass on Mass Spring Damper system without connecting the dashpot</b>
 </div>
+<div align = "center">
+<img alt="" src="./images/tpic.png" class="img-fluid"></br>
+<b>Fig 5: Rectilinear Plant</b>
+</div>
+
 								
 The hardware gain, k<sub>hw</sub>,  of the system is comprised of the product: k<sub>hw</sub> = k<sub>c</sub> k<sub>a</sub> k<sub>t</sub> k<sub>mp</sub> k<sub>e</sub> k<sub>ep</sub> <!--k<sub>s</sub>--> 
 
