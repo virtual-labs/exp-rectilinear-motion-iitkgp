@@ -31,8 +31,10 @@ An encoder is a sensor that converts a positional output into an electronic sign
 <img alt="" src="./images/plant2.png" class="img-fluid"><br/>
 	
 <b>Fig. 3. Rectilinear Motion Setup with dashpot connected</b>
+
 <img alt="" src="./images/tfequation.png" class="img-fluid">
 </div>
+
 Re arranging the equation (2) and comparing the denominator terms with the characteristics equation of a second order control system we get,
 
 $$s^2 + 2 \zeta \omega_n s + \omega_n^2 = s^2 + \frac{c}{m}s + \frac{k}{m}$$
