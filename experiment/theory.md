@@ -9,7 +9,7 @@ The fig 1 illustrates rectilinear motion for a body.
 <div align = "center">
 <img alt="" src="./images/rectibody.png" class="img-fluid">
 	
-<b>Fig 1: Rectilinear Motion</b>
+<b>Fig. 1. Rectilinear Motion</b>
 </div>
 							
 The experimental control system in practical laboratory is comprised of the electromechanical plant which consists of the spring-mass mechanism, its actuator and sensors and a subsystem 
@@ -25,12 +25,12 @@ An encoder is a sensor that converts a positional output into an electronic sign
 <div align = "center">
 <img alt="" src="./images/plant.png" class="img-fluid">
 	
-<b>Fig 2: Rectilinear Motion Setup without dashpot connected</b>
+<b>Fig. 2. Rectilinear Motion Setup without dashpot connected</b>
 </div>
 <div align="center">
 <img alt="" src="./images/plant2.png" class="img-fluid"><br/>
 	
-<b>Fig 3: Rectilinear Motion Setup with dashpot connected</b>
+<b>Fig. 3. Rectilinear Motion Setup with dashpot connected</b>
 <img alt="" src="./images/tfequation.png" class="img-fluid">
 </div>
 Re arranging the equation (2) and comparing the denominator terms with the characteristics equation of a second order control system we get,
@@ -63,13 +63,13 @@ Where,
 <div align = "center">
 <img alt="" src="./images/plot.png" class="img-fluid">
 	
-<b>Fig 4: Open loop step plot for 1 kg mass on Mass Spring Damper system without connecting the dashpot</b>
+<b>Fig. 4. Open loop step plot for 1 kg mass on Mass Spring Damper system without connecting the dashpot</b>
 </div>
 
 <div align = "center">
 <img alt="" src="./images/tpic.png" class="img-fluid">
 	
-<b>Fig 5: Rectilinear Plant</b>
+<b>Fig. 5. Rectilinear Plant</b>
 </div>
 
 								
