@@ -4,7 +4,7 @@
 								
 <div align="center">
 <img  src="./images/scth.png" style="width:81%;height:30%"><br/>
-<b>Fig 1: Schematic diagram of rectilinear motion control plant</b>
+<b>Fig. 1. Schematic diagram of rectilinear motion control plant</b>
 </div>
 								
 								
@@ -51,7 +51,7 @@ with the assumed linear segment using 'Adjust slope angle', 'Adjust slope length
 <div align="center">
 <img  src="./images/plot2.png" class="img-fluid"><br/>
 	
-<b>Fig 2: Calculation of positive slope acceleration</b>
+<b>Fig. 2. Calculation of positive slope acceleration</b>
 </div>
 							 
 17. Click on clockwise arrow symbol on 'Adjust slope angle' button to rotate the slope line in clockwise direction.
