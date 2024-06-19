@@ -32,18 +32,18 @@ An encoder is a sensor that converts a positional output into an electronic sign
 	
 <b>Fig. 3. Rectilinear Motion Setup with dashpot connected</b>
 
-<img alt="" src="./images/tfequation.png" class="img-fluid">
+<img alt="" src="./images/tfequation.png" style="width:100%">
 </div>
 
 Re arranging the equation (2) and comparing the denominator terms with the characteristics equation of a second order control system we get,
 
-$$s^2 + 2 \zeta \omega_n s + \omega_n^2 = s^2 + \frac{c}{m}s + \frac{k}{m}$$
+$$s^2 + 2 \zeta \omega_n s + \omega_n^2 = s^2 + \frac{c}{m}s + \frac{k}{m} \tag{3}$$
 								
-$$\omega_n^{2} = \frac{k}{m}$$
+$$\omega_n^{2} = \frac{k}{m} \tag{4}$$
 
-$$\zeta (damping \ ratio) = \frac{c}{2 \sqrt{k m}}$$
+$$\zeta = \frac{c}{2 \sqrt{k m}} \tag{5}$$
 
-$$\omega_d = \omega_n \sqrt{(1 - \zeta^{2})}$$
+$$\omega_d = \omega_n \sqrt{(1 - \zeta^{2})} \tag{6}$$
 								
 Where,
 								
@@ -52,6 +52,8 @@ Where,
 <i style ="font-family:'Bodoni MT';font-size:20px;">k</i> = Spring constant
 
 <i style ="font-family:'Bodoni MT';font-size:20px;">c</i> = Damping coefficient
+
+<span style ="font-family:'Bodoni MT';font-size:20px;">&zeta;</span> = Damping ratio
 
 <span style ="font-family:'Bodoni MT';font-size:20px;"><i>F</i>(t)</span> = Applied force
 
@@ -75,7 +77,9 @@ Where,
 </div>
 
 								
-The hardware gain, <i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>hw</sub></i>,  of the system is comprised of the product: <i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>hw</sub> = k<sub>c</sub> k<sub>a</sub> k<sub>t</sub> k<sub>mp</sub> k<sub>e</sub> k<sub>ep</sub></i> 
+The hardware gain, <i style ="font-family:'Bodoni MT';font-size:20px;">k<sub>hw</sub></i>,  of the system is comprised of the product 
+
+$$k_{hw} = k_c \ k_a \ k_t \ k_{mp} \ k_e \ k_{ep} \tag{7}$$
 
 where the theoretical values are:
 
