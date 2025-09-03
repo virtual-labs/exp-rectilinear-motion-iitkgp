@@ -71,7 +71,42 @@ document.getElementById('run2kg').style.display="none";
 
 }
 
+function Power(){
+	
+ ///power supply on-off switch
+ 
+	if(document.getElementById('sw').src.match('./images/switch_off.png')){
+		
+		document.getElementById('sw').src = './images/switch_on.png';
+		document.getElementById('cmnd').disabled=false;
+		document.getElementById('dta').disabled=false;
+		document.getElementById('plt').disabled=false;
+		document.getElementById('uti').disabled=false;
+		document.getElementById('valR').style['pointer-events'] = "auto";
+		document.getElementById('valR2').style['pointer-events'] = "auto";
+		document.getElementById('valR3').style['pointer-events'] = "auto";
+		document.getElementById('valR4').style['pointer-events'] = "auto";
+		document.getElementById('valR5').style['pointer-events'] = "auto";
+		document.getElementById('slider').value="0000";
+	}
 
+	else if(document.getElementById('sw').src.match('./images/switch_on.png')){	
+		
+		document.getElementById('sw').src = './images/switch_off.png';
+		document.getElementById('cmnd').disabled=true;
+		document.getElementById('dta').disabled=true;
+		document.getElementById('plt').disabled=true;
+		document.getElementById('uti').disabled=true;
+		document.getElementById('valR').style['pointer-events'] = "none";
+		document.getElementById('valR2').style['pointer-events'] = "none";
+		document.getElementById('valR3').style['pointer-events'] = "none";
+		document.getElementById('valR4').style['pointer-events'] = "none";
+		document.getElementById('valR5').style['pointer-events'] = "none";
+		document.getElementById('slider').value="";
+		
+	}
+	
+}
 
 
    //var val = document.getElementById("valR").value;
@@ -361,15 +396,20 @@ document.getElementById("Step Configuration").style.display="none";
 document.getElementById("olstep").style.display="none";
 //document.getElementById("stepok").style.display="none";
 document.getElementById("olradioname").style.display="none";
+alert('Select the Step option.');
 }
 }
 function stopstep(){
 
-document.getElementById("Step Configuration").style.display="none";
-document.getElementById("Trajectory Configuration").style.display="none";
+
 var ol= document.getElementById("olstep");
-if(ol . checked == true ){
+if(ol . checked == true && (document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3){
+	document.getElementById("Step Configuration").style.display="none";
+document.getElementById("Trajectory Configuration").style.display="none";
 document.getElementById("status").innerHTML="OPEN";
+}
+else {
+	alert('Follow the instructions. Select Open loop step and recheck the values of Step Size, Dwell Time, Number of reps');
 }
 }
 
@@ -377,14 +417,30 @@ function DBOX(){
 document.getElementById("dataAquisition").style.display="block";
 }
 function stopdata(){
+var r1 = document.getElementById("enpos");
+var r2 = document.getElementById("enve");
+if((r1 . checked == true || r2 . checked == true) && document.getElementById('servo').value!=0 && document.getElementById('servo').value==2){
+	
 document.getElementById("dataAquisition").style.display="none";
+}
+else {
+	alert('Follow the instructions. Select Encoder Position or Velocity and recheck the value of Sample Period (servo cycle)');
+}
 }
 
 function plotsetup(){
 	document.getElementById('Plot Configuration').style.display="block";
 }
 function stopplot(){
+	var r1 = document.getElementById("position");
+var r2 = document.getElementById("velocity");
+if(r1 . checked == true || r2 . checked == true){	
+	
 	document.getElementById('Plot Configuration').style.display="none";
+}
+else {
+	alert('Select Encoder Position or Velocity');
+}
 }
 
 
@@ -507,7 +563,7 @@ function slide(){
   i=0;
  }
  setTimeout(function(){ slide(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide2(){
  document.getElementById("img").src= arr2[i].src;
@@ -516,7 +572,7 @@ function slide2(){
   i=0;
  }
  setTimeout(function(){ slide2(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide3(){
  document.getElementById("img").src= arr3[i].src;
@@ -525,7 +581,7 @@ function slide3(){
   i=0;
  }
  setTimeout(function(){ slide3(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide4(){
  document.getElementById("img").src= arr4[i].src;
@@ -534,7 +590,7 @@ function slide4(){
   i=0;
  }
  setTimeout(function(){ slide4(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide5(){
  document.getElementById("img").src= arr5[i].src;
@@ -543,7 +599,7 @@ function slide5(){
   i=0;
  }
  setTimeout(function(){ slide5(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 
 function EBOX(){
@@ -552,6 +608,7 @@ document.getElementById("Execute").style.display="block";
 
 function RunAnim(){
 	/////for alert of no. of samples collected/////////
+	if( (document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -570,10 +627,16 @@ document.getElementById("img").style.display="block";
 slide('img',arr);
 setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  "samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
+	}
+	else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 
 }
 function RunAnim2(){
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -591,11 +654,16 @@ document.getElementById("img").style.display="block";
 slide2('img',arr2);
 setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 function RunAnim3(){
 	
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -614,11 +682,16 @@ document.getElementById("img").style.display="block";
 slide3('img',arr3);
 setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 function RunAnim4(){
 	
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -637,13 +710,18 @@ document.getElementById("img").style.display="block";
 slide4('img',arr4);
 setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 function RunAnim5(){
 	
 	
 	
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -661,7 +739,10 @@ document.getElementById("img").style.display="block";
 slide5('img',arr5);
 setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 
 
@@ -1056,17 +1137,25 @@ var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerH
   
 
 function graph(){
-if( document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('position').checked==true){
+if( document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('position').checked==true && document.getElementById('stv').value==0 && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('dt').value==3000 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+
 plotposition();
 document.getElementById('exportPositionChart').style.display="block";
 document.getElementById('exportVelocityChart').style.display="none";
+document.getElementById('cala1').disabled=false;
+	
 }
-else if(document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('velocity').checked==true){
+else if(document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('velocity').checked==true && document.getElementById('stv').value==2 && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('dt').value==75 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 plotvelocity();
 document.getElementById('exportVelocityChart').style.display="block";
 document.getElementById('exportPositionChart').style.display="none";
+document.getElementById('cala1').disabled=false;
 }
-
+else{
+		alert('Follow the instructions. Check the values of  Step Size, Dwell Time, Number of reps and Sample Period.');
+		document.getElementById('cala1').disabled=true;
+	}
 }
 
 function show_WDBox(){
@@ -1095,7 +1184,7 @@ document.getElementById('K').value= '1372.993';
 document.getElementById('wn1').value= '20.94';
 document.getElementById('wn2').value= '22.84';
 document.getElementById('zeta').value= '0.05865';*/
-
+if(document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('stv').value==0 && document.getElementById('dt').value==3000 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
 //calculation for mass 1///
 var m1 = parseFloat(document.getElementById('mass1').value);
  var mc = parseFloat(0.77);
@@ -1158,8 +1247,10 @@ document.getElementById('wn2').value= wn2;
 	  var thetaradian = parseFloat(Math.acos(theta)*Math.PI/180);
 	  var wd = parseFloat(wn2 * zetad2);*/
 
-
-
+}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 
 }
 //////Gain Calculation///////////////
@@ -1172,6 +1263,8 @@ document.getElementById('GainBox').style.display="none";
 }
 
 function SimulateGain(){
+	if(document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('stv').value==2 && document.getElementById('dt').value==75 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+
 	
 var ac1 = Math.abs(parseFloat(document.getElementById('ac1').value));
 var ac2 = Math.abs(parseFloat(document.getElementById('ac2').value));	
@@ -1187,9 +1280,11 @@ var ac2 = Math.abs(parseFloat(document.getElementById('ac2').value));
 	
 	document.getElementById('acavg').value= acavg;
 	document.getElementById('hwgain').value = khw;
+	}
 	
-	
-	
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}	
 	
 }
 
@@ -1339,7 +1434,9 @@ div.style.borderColor="green";
 div.style.borderWidth="3px";
 }*/
 
-
+function redi(){
+	alert('Click on Connect Dashpot button to perform the simulation with dashpot connected then do necessary calculations.');
+}
 
 
 
