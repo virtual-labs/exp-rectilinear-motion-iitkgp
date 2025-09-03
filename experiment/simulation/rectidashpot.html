@@ -37,25 +37,25 @@
   width: 10%;
   
   
-  border: 1px dotted #07ACE1;
+  border: 2px solid black;
 }
 #div2 {
   width: 10%;
   
   
-  border: 1px dotted #07ACE1;
+  border: 2px solid black;
 }
 #div3 {
   width: 10%;
   
   
-  border: 1px dotted #07ACE1;
+  border: 2px solid black;
 }
 #div4 {
   width: 10%;
   
   
-  border: 1px dotted #07ACE1;
+  border: 2px solid black;
 }	
 .col-md-6{
 width:50%;
@@ -94,54 +94,16 @@ text-align:center;
 
             </div>
             <div class="col-md-6">
-                <p class="h1"> <b> Study of Rectilinear Motion </b> </p>
+                <p class="h1"> <b> Simulation </b> </p>
             </div>
             <div class="col-md-3">
 
             </div>
         </div>
         <hr>
-        <div class="d-flex p-1 text-primary">
-          <div class="p-1" > <p class="h4"><a href="../index.html"> <span class="LN"> <b> Control and Instrumentation Lab </b></span> --> </a></p></div>
-          <div class="p-1"> <p class="h4"><a href="./index.html"> <span class="ExpN"> <b> Study of Rectilinear Motion </b> </span> </a></p></div>
-        </div>
+        
     </div>
     
-    <div class="container p-3 my-5 text-primary text-center border">
-        <div class="row">
-
-            <ul class="nav nav-pills nav-justified">
-                <li class="nav-item">
-                  <a class="nav-link" href="../index.html">Introduction</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../aim.html">Objective</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../prequiz.html">Pre Quiz</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../theory.html">Theory</a>
-                </li>
-				<li class="nav-item">
-                  <a class="nav-link" href="../procedure.html">Procedure</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="./index.html">Simulation</a>
-                  </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="../postquiz.html">Post Quiz</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../feedback.html">Feedback</a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../references.html">References</a>
-                  </li>
-
-              </ul>
-        </div>
-    </div>
 	
     <div class="container p-3 my-5 text-left border" style="text-align:justify">
       <div class="row">
@@ -150,22 +112,24 @@ text-align:center;
             <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
               <div id="inst" style="display:block;height:200px;overflow-y:auto;">
 					<ol>
-                 <li>First drag weights and drop them sequentially (move the top weight to the bottom blue dotted box and do the same for the second weight by placing it in the second lowest box.) in the mass carriage system. 
-				 Each weight is 500 g. First drag all the weights (i.e. 2 kg mass).</li></br>
+                 <li><ul><li>First drag weights and drop them sequentially (move the top weight to the bottom black box on the cart and do the same for the second weight by placing it in the second lowest box.) in the mass carriage system.</li> 
+				 <li>Each weight is 500 g. First drag all the weights (i.e. 2 kg mass).</li></ul></li></br>
 							  
-							  <li> Under 'Controls' section click on 'Trajectory' under command tab, then click on 'Step'. After that click on 'Set Up', put step size to zero, set dwell time to 3000 ms and 2 repetition . Select 'Open loop step' and 'Ok'.</li><br/>
+							  <li> <ul><li>Switch on the power supply by clicking on the red switch.</li>
+							  <li>Under 'Controls' section click on 'Trajectory' under command tab, then click on 'Step'.</li>
+							  <li>After that click on 'Setup', put 'Step Size' to zero, set 'Dwell Time' to 3000 ms and 1 repetition in 'Number of reps' input field. Select 'Open loop step' and 'Ok'.</li></li></ul><br/>
 							 
-							 <li> Click on "Setup Data Acquisition" under 'Data' tab, put 2 as the value of servo cycles and select 'Encoder Position'.</li></br>
+							 <li> Click on "Setup Data Acquisition" under 'Data' tab, put 2 as the value of Sample Period (servo cycle) and select 'Encoder Position'.</li></br>
 
-							  <li>Drag the mass carriage system through the slider up to -2.5 cm. </li><br/> 
+							  <li>Drag the mass carriage system through the slider (kept below the Mass Spring Damper plant) up to -2.5 cm. </li><br/> 
 
-							<li>Click on 'Execute' under 'command', then click on 'RUN' button. The system starts to oscillate.</li><br/>
+							<li>Click on 'Execute' under 'Command', then click on 'RUN' button. The system starts to oscillate.</li><br/>
 
 							<li>After the carriage stops oscillating, an alert massage will be shown. Click on 'Ok'.</li></br>
 
-							<li>Click on 'Set up Plot' under 'Plotting'. Select 'Encoder Position' and click on 'Ok'.</li>    </br>
+							<li>Click on 'Setup Plot' under 'Plotting'. Select 'Encoder Position' and click on 'Ok'.</li>    </br>
 
-							<li> Click on 'Plot data' under 'Plotting' ,the open loop step response for the particular mass chosen, will be shown. Plot can be
+							<li> Click on 'Plot Data' under 'Plotting' ,the open loop step response for the particular mass chosen, will be shown. Plot can be
 							downloaded by clicking on 'Download Plot' button.</li></br>
 							 
 							<li>Click on 'Reset Controller' under 'Utility' tab. Now to observe the response for unloaded mass choose no weights and follow the steps 2-8.</li><br/>
@@ -186,25 +150,25 @@ text-align:center;
 							 <li> To observe system velocity first remove dashpot from the mass carriage system by clicking on 'Remove Dashpot' button. Now secure 2 kg mass in the carriage.</li><br/>
 							 
 							 <li>Follow steps 2-8 with some following edits.<br/>
-							 i) In step 2 set dwell time to 75 ms and repetition 3.<br/> 
+							 i) In step 2 set 'Step Size' to 2, 'Dwell Time' to 75 ms and repetition 3.<br/> 
 							 ii)In step 3 select 'Encoder Velocity'.<br/>
 							 iii)In step 7 Select 'Encoder Velocity' and click on 'Ok'.<br/><br/>
 							 
-							 <li>To calculate acceleration first assume a positive-sloped linear segment (two points on positive slope forming straight line) from velocity vs. time plot. Align the slope line (red coloured line) 
-							 with the assumed linear segment using 'Adjust slope angle', 'Adjust slope length', 'Horizontal movement' and 'Vertical movement'
-							 buttons.</li><br/>
+							 <li><ul><li>To calculate acceleration first assume a positive-sloped linear segment (two points on positive slope forming straight line) from velocity vs. time plot.</li>
+							 <li>Align the slope line (red coloured line) with the assumed linear segment using 'Adjust slope angle', 'Adjust slope length', 'Horizontal movement' and 'Vertical movement'
+							 buttons.</li></li></ul><br/>
 							 
-							 <li>Click on clockwise arrow symbol on 'Adjust slope angle' button to rotate the slope line in clockwise direction.
-								Click on counter-clockwise arrow symbol on 'Adjust slope angle' button to rotate the slope line in anti clockwise direction.
+							 <li><ul><li>Click on clockwise arrow symbol on 'Adjust slope angle' button to rotate the slope line in clockwise direction.</li>
+								<li>Click on counter-clockwise arrow symbol on 'Adjust slope angle' button to rotate the slope line in anti clockwise direction.</li>
 								
-								Click on plus symbol on 'Adjust slope length' button to increase the length of the slope line.
-								Click on minus symbol on 'Adjust slope length' button to decrease the length of the slope line.
+								<li>Click on plus symbol on 'Adjust slope length' button to increase the length of the slope line.</li>
+								<li>Click on minus symbol on 'Adjust slope length' button to decrease the length of the slope line.</li>
 								
-								Click on the arrow symbol in the left side on 'Horizontal movement' button to move the slope line to the right.
-								Click on the arrow symbol in the right side on 'Horizontal movement' button to move the slope line to the left.
+								<li>Click on the arrow symbol in the left side on 'Horizontal movement' button to move the slope line to the right.</li>
+								<li>Click on the arrow symbol in the right side on 'Horizontal movement' button to move the slope line to the left.</li>
 								
-								Click on the arrow symbol in the left side on 'Vertical movement' button to move the slope line to the upwards direction.
-								Click on the arrow symbol in the right side on 'Vertical movement' button to move the slope line to the downwards direction.							
+								<li>Click on the arrow symbol in the left side on 'Vertical movement' button to move the slope line to the upwards direction.</li>
+								<li>Click on the arrow symbol in the right side on 'Vertical movement' button to move the slope line to the downwards direction.</li></ul>							
 								
 								</li><br/>
 							 
@@ -214,6 +178,8 @@ text-align:center;
 							 <li>Similarly follow steps 16-18 to calculate negative slope acceleration from an assumed negative-sloped linear segment in velocity vs. time plot.</li><br/>
 							 
 							 <li> Under 'Calculation' tab select 'Gain Calculation'. Enter the acceleration values from positive slope and negative slope of velocity vs. time plot. Click on 'Simulate' button.</li><br/>
+							 
+							 <li>Switch off the power supply by clicking on the red switch.</li><br/>
  
  </ol>
   </div>
@@ -237,20 +203,21 @@ text-align:center;
  <div class="col-md-6">
  <div class ="img-container">
   <img class="img-fluid " id="img" src="Mass_Dashpot/ULmassd/0.jpg "/><!--div for droppable divs-->
+   <img src="./images/switch_off.png" id="sw" style="position:absolute;top:4%;left:61%;width:3.5%;height:13%;" onclick= "Power()">
   
         <!--<div class=" p-2 text-center" id= "weights" style="display:block;position:absolute;top:0%;left:0%;width:100%;height:100%;z-index:1;">-->
-				<div class=" p-2" id="div4" ondrop="drop(event);hideweights()" ondragover="allowDrop(event)" style="display:block;position:absolute;top:27%;left:41%;width:23%;height:6%;" ></div>
-				<div class=" p-2" id="div3"  ondrop="drop(event);hideweights()" ondragover="allowDrop(event)"style="display:block;position:absolute;top:33%;left:41%;width:23%;height:6%;" ></div>
-				<div class=" p-2" id="div2"  ondrop="drop(event);hideweights()" ondragover="allowDrop(event)"style="display:block;position:absolute;top:39%;left:41%;width:23%;height:6%;" ></div>
-				<div class=" p-2" id="div1"  ondrop="drop(event);hideweights()" ondragover="allowDrop(event)"style="display:block;position:absolute;top:45%;left:41%;width:23%;height:6%;" ></div>
+				<div class=" p-2" id="div4" ondrop="drop(event);hideweights()" ondragover="allowDrop(event)" style="display:block;position:absolute;top:40%;left:59%;width:14.5%;height:3%;" ></div>
+				<div class=" p-2" id="div3"  ondrop="drop(event);hideweights()" ondragover="allowDrop(event)"style="display:block;position:absolute;top:47%;left:59%;width:14.5%;height:3%;" ></div>
+				<div class=" p-2" id="div2"  ondrop="drop(event);hideweights()" ondragover="allowDrop(event)"style="display:block;position:absolute;top:54%;left:59%;width:14.5%;height:3%;" ></div>
+				<div class=" p-2" id="div1"  ondrop="drop(event);hideweights()" ondragover="allowDrop(event)"style="display:block;position:absolute;top:61%;left:59%;width:14.5%;height:3%;" ></div>
 		<!--</div>-->
  </div>
   
-   <input id="valR" type="range" min="-3" max="3" value="0" step="0.5" style="display:none" oninput="showVal1(this.value)" onchange="showVal1(this.value);hideweights()" onmouseover="hover(this.value)" />
-   <input id="valR2" type="range" min="-3" max="3" value="0" step="0.5"  style="display:block" oninput="showVal2(this.value)" onchange="showVal2(this.value);hideweights()" onmouseover="hover(this.value)" />
-   <input id="valR3" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none" oninput="showVal3(this.value)" onchange="showVal3(this.value);hideweights()" onmouseover="hover(this.value)" />
-   <input id="valR4" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none" oninput="showVal4(this.value)" onchange="showVal4(this.value);hideweights()" onmouseover="hover(this.value)" />
-   <input id="valR5" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none" oninput="showVal5(this.value)" onchange="showVal5(this.value);hideweights()" onmouseover="hover(this.value)" />
+   <input id="valR" type="range" min="-3" max="3" value="0" step="0.5" style="display:none;pointer-events:none" oninput="showVal1(this.value)" onchange="showVal1(this.value);hideweights()" onmouseover="hover(this.value)" />
+   <input id="valR2" type="range" min="-3" max="3" value="0" step="0.5"  style="display:block;pointer-events:none" oninput="showVal2(this.value)" onchange="showVal2(this.value);hideweights()" onmouseover="hover(this.value)" />
+   <input id="valR3" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none;pointer-events:none" oninput="showVal3(this.value)" onchange="showVal3(this.value);hideweights()" onmouseover="hover(this.value)" />
+   <input id="valR4" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none;pointer-events:none" oninput="showVal4(this.value)" onchange="showVal4(this.value);hideweights()" onmouseover="hover(this.value)" />
+   <input id="valR5" type="range" min="-3" max="3" value="0" step="0.5"  style="display:none;pointer-events:none" oninput="showVal5(this.value)" onchange="showVal5(this.value);hideweights()" onmouseover="hover(this.value)" />
    <br/><span class="w-auto text-center" id="range" style="display:block;float:left;">0</span>  
   
   </div><!--end of second row first column -->
@@ -279,7 +246,7 @@ text-align:center;
     </div>-->
 	
 	<div class="btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Command</button>
+      <button type="button" id="cmnd" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" disabled=disabled>Command</button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" onclick="TBOX()" >Trajectory</a></li>
         <li><a class="dropdown-item" onclick="EBOX()">Execute</a></li>
@@ -288,46 +255,46 @@ text-align:center;
     </div>
 	
 	<div class="btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Data</button>
+      <button type="button" id="dta" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" disabled=disabled>Data</button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" onclick="DBOX()" >Setup Data Acquisition</a></li>
         </ul>
     </div>
 	
 	<div class="btn-group my-2">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Plotting</button>
+      <button type="button" id="plt" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" disabled=disabled>Plotting</button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" onclick="plotsetup()" >Set Up Plot</a></li>
+        <li><a class="dropdown-item" onclick="plotsetup()" >Setup Plot</a></li>
         <li><a class="dropdown-item" onclick="graph()">Plot Data</a></li>
 		
         </ul>
     </div>
 	
 	<div class="btn-group">
-      <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Utility</button>
+      <button type="button" id="uti" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" disabled=disabled>Utility</button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#" >Zero Position</a></li>
+        <!-- <li><a class="dropdown-item" href="#" >Zero Position</a></li> -->
         <li><a class="dropdown-item" onclick="Resetcontroller()">Reset Controller</a></li>
 		
         </ul>
     </div>
 	<!-------------------Button end-------------------------->
     
-    <br><div class="w-auto p-2 my-1 text-center" style="background-color:powderblue; font-size:20px; color:black;border:1px dotted black;">Apparatus:Linear inertia Model 210</div>
-	<div class="w-auto p-2 my-1 text-center" style="background-color:powderblue;  font-size:20px; color:black;  border:1px dotted black;">Encoder Position counts: <input class="text-center" id="slider" type="number" min="0000" max="6000" value="0000" style="background-color:yellow; dotted black" ><br> </div>
+    <br><!-- <div class="w-auto p-2 my-1 text-center" style="background-color:powderblue; font-size:20px; color:black;border:1px dotted black;">Apparatus:Linear inertia Model 210</div> -->
+	<div class="w-auto p-2 my-1 text-center" style="background-color:powderblue;  font-size:20px; color:black;  border:1px dotted black;">Encoder Position counts: <input class="text-center" id="slider" type="number" min="0000" max="6000" value="" style="background-color:yellow" readonly=readonly><br> </div>
 	<div class="w-auto p-2 my-1 " style="background-color:powderblue;  font-size:20px; color:black;  border:1px dotted black;">Control Loop Status: <span id="status">CLOSED </span></div>
 	
-	<p class= "text-center">Ts is set as 0.00442</p> 
+	<p class= "text-center">Sample time (Ts) is set as 0.00442</p>
   
 		  
 </div>
-<span class="w-auto text-center" >Mass (kg) :&nbsp;</span><select class="w-auto text-center" name="MASS(Kg)" id="MASS(kg)" onclick=" imchange(this)"    style="cursor:pointer; background-color:#85D2EE;"readonly="readonly">
+<span class="w-auto text-center" >Mass (kg) :&nbsp;</span><select class="w-auto text-center" name="MASS(Kg)" id="MASS(kg)" onclick=" imchange(this)"    style="cursor:pointer; background-color:#85D2EE;pointer-events:none;">
   <option id="0"  value="1"SELECTED >0</option><option id="0.5"  value="2">0.5</option><option id="1"  value="3">1</option><option id="1.5"  value="4">1.5</option><option id="2"  value="5" readonly=readonly>2</option></select>
 	
   <div class="btn-group">
-  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Calculation</button>
+  <button type="button" id="cala1" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" disabled=disabled>Calculation</button>
   <ul class="dropdown-menu">
-  <li><a class="dropdown-item" href="#">Without Damper</a></li>
+  <li><a class="dropdown-item" onclick="redi2()">Without Damper</a></li>
   <li><a class="dropdown-item" onclick="show_DBox()">With Damper</a></li>
   
   </ul>
@@ -359,13 +326,13 @@ text-align:center;
 <input class="w-auto text-center"id="ramp" type="radio" name='signal'value='ramp' disabled='true'>&nbsp;Ramp<br>
 <input class="w-auto text-center"id="para" type="radio" name='signal'value='parabolic' disabled='true'>&nbsp;Parabolic<br>
 <input class="w-auto text-center"id="cubic" type="radio" name='signal'value='cubic' disabled='true'>&nbsp;Cubic<br><br/>
-<button id="t1" type="button" class="btn btn-primary" onclick="stepcon()" style="display:block;">Set Up</button><br>
+<button id="t1" type="button" class="btn btn-primary" onclick="stepcon()" style="display:block;">Setup</button><br>
 </div>	
 
 <div class="w-auto p-2 my-1"id="Step Configuration" style="display:none;margin-top:auto; border: 10px solid #0d6efd; border-radius: 10px;">
 	<span class="w-auto text-center"><b>Configure Step Trajectory</b></span><br/><br/>
-	<input type="number" class=" text-center" value="0.0" readonly=readonly style="width:15%">&nbsp;Step Size (Volts)<br></br>
-	<input type="number" class="w-auto text-center" id="dt" value="3000" min="1000" max="30000" step="1000">&nbsp;Dwell Time(msec)<br></br>
+	<input  class=" text-center" value="0"  style="width:15%" id="stv">&nbsp;Step Size (Volts)<br></br>
+	<input  class="w-auto text-center" id="dt" value="3000" min="75" max="3000" step="100">&nbsp;Dwell Time(msec)<br></br>
 	<input type="number" class="w-auto text-center"id="rep" value="1" min="1" max="3">&nbsp;Number of reps<br></br>
 	<input class="w-auto text-center"id="clstep" name="control"type="radio" value="closedloopstep"disabled='true'>&nbsp;Closed loop step<br><br/>
 	<input class="w-auto text-center"id="olstep" name="control"type="radio" value="openloopstep"><p id='olradioname'style=" position:relative; top:-20px; left:20px">&nbsp;Open loop step</p>
@@ -376,7 +343,7 @@ text-align:center;
 	 <span class="w-auto text-center" ><b>Setup Data Acquisition</b></span><br/><br/>
 	&nbsp;&nbsp; &nbsp;&nbsp; <span class="w-auto text-center"> Selected items:</span><br/>
 	&nbsp; &nbsp; <span class="w-auto text-center">Encoder Position</span><br/><br/>
-	&nbsp; &nbsp;<input class="w-auto text-center" type="number" id="servo" min="1" max="10" value="2" >&nbsp;Sample Period (servo cycle)<br/><br/>
+	&nbsp; &nbsp;<input class="w-auto text-center" id="servo" min="1" max="2" value="2" >&nbsp;Sample Period (servo cycle)<br/><br/>
 	<button type="button" class="btn btn-primary" onclick="stopdata()">Ok</button>
 	</div>		
 <div class="w-auto p-2 my-1" id="Execute" style="display:none; margin-top:auto; border: 10px solid #0d6efd; border-radius: 10px;">
