@@ -2,8 +2,6 @@
 
  **Rectilinear Motion**
 				  
-<b>Rectilinear Motion</b><br/>
-
 Rectilinear motion is another name of straight-line motion. This type of motion describes the movement of a particle or a body.
 A body is said to experience rectilinear motion if any two particles of the body travel the same distance along two parallel straight lines.
 The fig 1 illustrates rectilinear motion for a body.</br>
