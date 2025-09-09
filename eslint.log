@@ -1,0 +1,465 @@
+
+/home/runner/work/exp-rectilinear-motion-iitkgp/exp-rectilinear-motion-iitkgp/experiment/simulation/js/Recti_dashpot.js
+     3:19  warning  'select' is defined but never used            no-unused-vars
+     5:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+    19:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+    70:10  warning  'Power' is defined but never used             no-unused-vars
+   113:26  warning  'showVal1' is defined but never used          no-unused-vars
+   115:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   116:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   118:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   163:10  warning  'showVal2' is defined but never used          no-unused-vars
+   165:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   167:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   213:10  warning  'showVal3' is defined but never used          no-unused-vars
+   215:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   217:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   262:10  warning  'showVal4' is defined but never used          no-unused-vars
+   264:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   266:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   311:10  warning  'showVal5' is defined but never used          no-unused-vars
+   313:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   315:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   367:10  warning  'hover' is defined but never used             no-unused-vars
+   377:10  warning  'TBOX' is defined but never used              no-unused-vars
+   380:10  warning  'stepcon' is defined but never used           no-unused-vars
+   397:10  warning  'stopstep' is defined but never used          no-unused-vars
+   411:10  warning  'DBOX' is defined but never used              no-unused-vars
+   414:10  warning  'stopdata' is defined but never used          no-unused-vars
+   422:10  warning  'plotsetup' is defined but never used         no-unused-vars
+   425:10  warning  'stopplot' is defined but never used          no-unused-vars
+   596:10  warning  'EBOX' is defined but never used              no-unused-vars
+   600:10  warning  'RunAnim' is defined but never used           no-unused-vars
+   628:10  warning  'RunAnim2' is defined but never used          no-unused-vars
+   655:10  warning  'RunAnim3' is defined but never used          no-unused-vars
+   684:10  warning  'RunAnim4' is defined but never used          no-unused-vars
+   713:10  warning  'RunAnim5' is defined but never used          no-unused-vars
+   745:10  warning  'CancelRun' is defined but never used         no-unused-vars
+   748:10  warning  'Resetcontroller' is defined but never used   no-unused-vars
+   756:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   760:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   761:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   766:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   767:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   768:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   769:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   770:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   771:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   772:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   773:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   774:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   775:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   776:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   777:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   778:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   779:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   780:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   781:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   782:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   783:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   784:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   785:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   786:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   787:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   788:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   789:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   797:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   798:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   799:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   800:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   801:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   802:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   803:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   804:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   806:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   807:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   808:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   809:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   810:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   811:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   812:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   813:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   814:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   815:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   816:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   818:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   820:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   821:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   822:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   823:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   826:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   827:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   828:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   829:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   830:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   831:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   832:21  warning  'CanvasJS' is not defined                     no-undef
+   835:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   837:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   839:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   840:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   844:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   894:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   895:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   896:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   897:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   898:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   899:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   900:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   901:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   902:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   903:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   904:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   905:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   906:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   907:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   908:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   909:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   910:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   911:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   912:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   913:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   914:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   915:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   916:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   917:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   918:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   919:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   920:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   921:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   922:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   923:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   924:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   925:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   926:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   927:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   928:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   929:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   930:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   931:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   932:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   933:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   934:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   935:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   936:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   937:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   938:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   939:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   939:20  warning  'CanvasJS' is not defined                     no-undef
+   942:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   944:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   946:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   947:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   951:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   971:10  warning  'graph' is defined but never used             no-unused-vars
+   988:10  warning  'removeDashpot' is defined but never used     no-unused-vars
+   990:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1013:10  warning  'show_DBox' is defined but never used         no-unused-vars
+  1016:10  warning  'hide_DBox' is defined but never used         no-unused-vars
+  1021:10  warning  'Simulate2' is defined but never used         no-unused-vars
+  1080:10  warning  'allowDrop' is defined but never used         no-unused-vars
+  1084:10  warning  'drag' is defined but never used              no-unused-vars
+  1088:10  warning  'drop' is defined but never used              no-unused-vars
+  1089:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1095:7   warning  '_target' is assigned a value but never used  no-unused-vars
+  1095:17  warning  '$' is not defined                            no-undef
+  1100:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1101:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1102:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1105:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1106:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1107:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1108:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1109:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1115:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1116:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1117:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1120:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1121:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1122:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1123:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1124:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1127:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1128:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1129:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1132:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1133:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1134:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1135:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1136:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1139:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1140:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1141:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1144:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1145:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1146:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1147:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1148:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1152:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1158:10  warning  'showweights' is defined but never used       no-unused-vars
+  1167:10  warning  'hideweights' is defined but never used       no-unused-vars
+  1176:10  warning  'redi2' is defined but never used             no-unused-vars
+
+/home/runner/work/exp-rectilinear-motion-iitkgp/exp-rectilinear-motion-iitkgp/experiment/simulation/js/Recti_simu.js
+     3:19  warning  'select' is defined but never used            no-unused-vars
+     5:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+    19:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+    56:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+    74:10  warning  'Power' is defined but never used             no-unused-vars
+   117:26  warning  'showVal1' is defined but never used          no-unused-vars
+   119:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   120:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   122:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   167:10  warning  'showVal2' is defined but never used          no-unused-vars
+   169:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   171:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   217:10  warning  'showVal3' is defined but never used          no-unused-vars
+   219:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   221:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   266:10  warning  'showVal4' is defined but never used          no-unused-vars
+   268:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   270:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   315:10  warning  'showVal5' is defined but never used          no-unused-vars
+   317:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   319:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   371:10  warning  'hover' is defined but never used             no-unused-vars
+   381:10  warning  'TBOX' is defined but never used              no-unused-vars
+   384:10  warning  'stepcon' is defined but never used           no-unused-vars
+   402:10  warning  'stopstep' is defined but never used          no-unused-vars
+   416:10  warning  'DBOX' is defined but never used              no-unused-vars
+   419:10  warning  'stopdata' is defined but never used          no-unused-vars
+   431:10  warning  'plotsetup' is defined but never used         no-unused-vars
+   434:10  warning  'stopplot' is defined but never used          no-unused-vars
+   605:10  warning  'EBOX' is defined but never used              no-unused-vars
+   609:10  warning  'RunAnim' is defined but never used           no-unused-vars
+   636:10  warning  'RunAnim2' is defined but never used          no-unused-vars
+   662:10  warning  'RunAnim3' is defined but never used          no-unused-vars
+   690:10  warning  'RunAnim4' is defined but never used          no-unused-vars
+   718:10  warning  'RunAnim5' is defined but never used          no-unused-vars
+   749:10  warning  'CancelRun' is defined but never used         no-unused-vars
+   752:10  warning  'Resetcontroller' is defined but never used   no-unused-vars
+   760:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   761:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   762:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   763:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   764:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   769:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   770:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   777:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   778:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   779:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   780:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   781:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   782:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   783:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   784:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   785:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   786:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   787:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   788:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   789:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   790:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   791:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   792:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   793:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   794:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   795:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   796:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   797:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   797:8   warning  'gain' is assigned a value but never used     no-unused-vars
+   799:6   warning  'hwgain' is assigned a value but never used   no-unused-vars
+   800:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   801:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   802:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   803:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   811:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   812:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   813:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   814:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   815:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   817:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   818:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   819:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   820:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   821:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   822:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   823:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   824:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   825:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   826:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   827:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   829:3   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   831:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   832:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   833:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   834:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   835:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   836:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   837:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   838:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   839:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   840:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   841:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   842:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   843:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   844:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   845:21  warning  'CanvasJS' is not defined                     no-undef
+   848:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   850:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   852:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   853:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   857:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   915:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   916:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   917:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   918:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   924:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   925:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   926:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   927:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   928:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   929:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   930:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   931:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   932:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   933:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   934:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   935:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   936:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   937:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   938:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   939:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   940:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   941:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   942:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   943:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   944:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   945:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   946:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   947:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   948:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   949:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   950:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   951:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   952:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   953:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   954:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   955:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   956:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   957:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   958:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   959:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   960:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   961:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   962:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   963:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   964:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   966:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   968:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   969:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   970:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   973:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   974:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   975:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   976:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   977:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   978:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   979:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   980:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   981:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   982:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   983:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   983:20  warning  'CanvasJS' is not defined                     no-undef
+   986:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   988:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   990:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   993:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   994:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   995:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+   999:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1005:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1018:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1019:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1036:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1041:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1042:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1045:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1047:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1048:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1049:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1052:2   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1054:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1055:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1068:11  warning  'moveL' is defined but never used             no-unused-vars
+  1074:11  warning  'moveR' is defined but never used             no-unused-vars
+  1080:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1083:11  warning  'moveT' is defined but never used             no-unused-vars
+  1089:11  warning  'moveD' is defined but never used             no-unused-vars
+  1097:11  warning  'rotateLine' is defined but never used        no-unused-vars
+  1108:11  warning  'rotateLineRev' is defined but never used     no-unused-vars
+  1121:11  warning  'InLine' is defined but never used            no-unused-vars
+  1127:11  warning  'DeLine' is defined but never used            no-unused-vars
+  1133:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1134:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1135:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1136:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1139:10  warning  'graph' is defined but never used             no-unused-vars
+  1161:10  warning  'show_WDBox' is defined but never used        no-unused-vars
+  1164:10  warning  'hide_WDBox' is defined but never used        no-unused-vars
+  1169:10  warning  'Simulate1' is defined but never used         no-unused-vars
+  1204:6   warning  'mc' is already defined                       no-redeclare
+  1206:6   warning  'c' is already defined                        no-redeclare
+  1207:6   warning  'c2' is already defined                       no-redeclare
+  1208:6   warning  'k' is already defined                        no-redeclare
+  1208:19  warning  'fk' is already defined                       no-redeclare
+  1208:19  warning  'fk' is assigned a value but never used       no-unused-vars
+  1258:10  warning  'showGain' is defined but never used          no-unused-vars
+  1261:10  warning  'hideGain' is defined but never used          no-unused-vars
+  1265:10  warning  'SimulateGain' is defined but never used      no-unused-vars
+  1275:6   warning  'ks' is assigned a value but never used       no-unused-vars
+  1320:10  warning  'allowDrop' is defined but never used         no-unused-vars
+  1324:10  warning  'drag' is defined but never used              no-unused-vars
+  1328:10  warning  'drop' is defined but never used              no-unused-vars
+  1329:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1335:7   warning  '_target' is assigned a value but never used  no-unused-vars
+  1335:17  warning  '$' is not defined                            no-undef
+  1340:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1341:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1342:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1345:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1346:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1347:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1348:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1349:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1355:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1356:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1357:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1360:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1361:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1362:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1363:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1364:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1367:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1368:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1369:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1372:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1373:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1374:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1375:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1376:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1379:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1380:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1381:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1384:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1385:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1386:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1387:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1388:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1392:1   warning  Mixed spaces and tabs                         no-mixed-spaces-and-tabs
+  1398:11  warning  'connectDashpot' is defined but never used    no-unused-vars
+  1415:10  warning  'showweights' is defined but never used       no-unused-vars
+  1424:10  warning  'hideweights' is defined but never used       no-unused-vars
+  1437:10  warning  'redi' is defined but never used              no-unused-vars
+
+✖ 458 problems (0 errors, 458 warnings)
+
