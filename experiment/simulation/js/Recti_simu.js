@@ -71,7 +71,42 @@ document.getElementById('run2kg').style.display="none";
 
 }
 
+function Power(){
+	
+ ///power supply on-off switch
+ 
+	if(document.getElementById('sw').src.match('./images/switch_off.png')){
+		
+		document.getElementById('sw').src = './images/switch_on.png';
+		document.getElementById('cmnd').disabled=false;
+		document.getElementById('dta').disabled=false;
+		document.getElementById('plt').disabled=false;
+		document.getElementById('uti').disabled=false;
+		document.getElementById('valR').style['pointer-events'] = "auto";
+		document.getElementById('valR2').style['pointer-events'] = "auto";
+		document.getElementById('valR3').style['pointer-events'] = "auto";
+		document.getElementById('valR4').style['pointer-events'] = "auto";
+		document.getElementById('valR5').style['pointer-events'] = "auto";
+		document.getElementById('slider').value="0000";
+	}
 
+	else if(document.getElementById('sw').src.match('./images/switch_on.png')){	
+		
+		document.getElementById('sw').src = './images/switch_off.png';
+		document.getElementById('cmnd').disabled=true;
+		document.getElementById('dta').disabled=true;
+		document.getElementById('plt').disabled=true;
+		document.getElementById('uti').disabled=true;
+		document.getElementById('valR').style['pointer-events'] = "none";
+		document.getElementById('valR2').style['pointer-events'] = "none";
+		document.getElementById('valR3').style['pointer-events'] = "none";
+		document.getElementById('valR4').style['pointer-events'] = "none";
+		document.getElementById('valR5').style['pointer-events'] = "none";
+		document.getElementById('slider').value="";
+		
+	}
+	
+}
 
 
    //var val = document.getElementById("valR").value;
@@ -361,15 +396,20 @@ document.getElementById("Step Configuration").style.display="none";
 document.getElementById("olstep").style.display="none";
 //document.getElementById("stepok").style.display="none";
 document.getElementById("olradioname").style.display="none";
+alert('Select the Step option.');
 }
 }
 function stopstep(){
 
-document.getElementById("Step Configuration").style.display="none";
-document.getElementById("Trajectory Configuration").style.display="none";
+
 var ol= document.getElementById("olstep");
-if(ol . checked == true ){
+if(ol . checked == true && (document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3){
+	document.getElementById("Step Configuration").style.display="none";
+document.getElementById("Trajectory Configuration").style.display="none";
 document.getElementById("status").innerHTML="OPEN";
+}
+else {
+	alert('Follow the instructions. Select Open loop step and recheck the values of Step Size, Dwell Time, Number of reps');
 }
 }
 
@@ -377,14 +417,30 @@ function DBOX(){
 document.getElementById("dataAquisition").style.display="block";
 }
 function stopdata(){
+var r1 = document.getElementById("enpos");
+var r2 = document.getElementById("enve");
+if((r1 . checked == true || r2 . checked == true) && document.getElementById('servo').value!=0 && document.getElementById('servo').value==2){
+	
 document.getElementById("dataAquisition").style.display="none";
+}
+else {
+	alert('Follow the instructions. Select Encoder Position or Velocity and recheck the value of Sample Period (servo cycle)');
+}
 }
 
 function plotsetup(){
 	document.getElementById('Plot Configuration').style.display="block";
 }
 function stopplot(){
+	var r1 = document.getElementById("position");
+var r2 = document.getElementById("velocity");
+if(r1 . checked == true || r2 . checked == true){	
+	
 	document.getElementById('Plot Configuration').style.display="none";
+}
+else {
+	alert('Select Encoder Position or Velocity');
+}
 }
 
 
@@ -507,7 +563,7 @@ function slide(){
   i=0;
  }
  setTimeout(function(){ slide(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide2(){
  document.getElementById("img").src= arr2[i].src;
@@ -516,7 +572,7 @@ function slide2(){
   i=0;
  }
  setTimeout(function(){ slide2(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide3(){
  document.getElementById("img").src= arr3[i].src;
@@ -525,7 +581,7 @@ function slide3(){
   i=0;
  }
  setTimeout(function(){ slide3(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide4(){
  document.getElementById("img").src= arr4[i].src;
@@ -534,7 +590,7 @@ function slide4(){
   i=0;
  }
  setTimeout(function(){ slide4(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 function slide5(){
  document.getElementById("img").src= arr5[i].src;
@@ -543,7 +599,7 @@ function slide5(){
   i=0;
  }
  setTimeout(function(){ slide5(); },40);
- clearTimeout(120); 
+ clearTimeout(90); 
 }
 
 function EBOX(){
@@ -552,6 +608,7 @@ document.getElementById("Execute").style.display="block";
 
 function RunAnim(){
 	/////for alert of no. of samples collected/////////
+	if( (document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -568,12 +625,18 @@ function RunAnim(){
 	
 document.getElementById("img").style.display="block";
 slide('img',arr);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5500);
+setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  "samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
+	}
+	else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 
 }
 function RunAnim2(){
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -589,13 +652,18 @@ function RunAnim2(){
 	
 document.getElementById("img").style.display="block";
 slide2('img',arr2);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5500);
+setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 function RunAnim3(){
 	
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -612,13 +680,18 @@ function RunAnim3(){
 	
 document.getElementById("img").style.display="block";
 slide3('img',arr3);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5500);
+setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 function RunAnim4(){
 	
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -635,15 +708,20 @@ function RunAnim4(){
 	
 document.getElementById("img").style.display="block";
 slide4('img',arr4);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5500);
+setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 function RunAnim5(){
 	
 	
 	
 	/////for alert of no. of samples collected/////////
+	if((document.getElementById('stv').value==0 || document.getElementById('stv').value==2) && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && (document.getElementById('dt').value==3000 || document.getElementById('dt').value==75) && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 	var sampleperiod = parseFloat(0.00442);
 	var repeatation = document.getElementById('rep').value;
 	var dwelltime = document.getElementById('dt').value;
@@ -659,9 +737,12 @@ function RunAnim5(){
 	
 document.getElementById("img").style.display="block";
 slide5('img',arr5);
-setTimeout(function(){ alert("Data uploaded successfully,check plot."  + samplecount +  "samples collected"); }, 5500);
+setTimeout(function(){ alert("Data uploaded successfully,check plot. "  + samplecount +  " samples collected"); }, 5500);
 document.getElementById("Execute").style.display="none";
-
+	}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 }
 
 
@@ -680,6 +761,13 @@ function Resetcontroller(){
 	  document.getElementById("plotbucket").style.display="block";
 	  document.getElementById("chartContainer").style.display="block";
 	  document.getElementById("chartContainer2").style.display="none";
+	  document.getElementById("slopeline").style.display="none";
+	document.getElementById("btnangl").style.visibility ="hidden";
+	document.getElementById("btnlngth").style.visibility ="hidden";
+	document.getElementById("btnhpos").style.visibility ="hidden";
+	document.getElementById("btnvpos").style.visibility ="hidden";
+	  
+	  
 	var y= new Array();
 var dataPoints=[];
 
@@ -689,7 +777,7 @@ var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerH
 	  var M= parseFloat(document.getElementById("MASS(kg)").options[i].innerHTML);//value.innerHTML);
 	  var mc = 0.77;
 	  var TM =parseFloat(M+mc);// parseFloat(2.866);//+(M+mc).toFixed(2);
-	  alert(TM);
+	  //alert(TM);
 	  var c = parseFloat(2.1);//zeta value 0.05
 	  var c2 =parseFloat(Math.pow(c,2));
 	  var k = 390; var fk =parseFloat(1/k);
@@ -758,16 +846,16 @@ function myFunction() {
     {
        
 	  title:{
-      text: "OpenLoop Step plot"
+      text: "OpenLoop Step Plot"
 	  
       },
 	  
 	  axisX:{
         interlacedColor: "#D9D9DA",
-        title: "Time(Sec)"
+        title: "Time (sec)"
       },
 	  axisY: {
-            title: "Amplitude(Encoder position counts)",
+            title: "Amplitude (Encoder position counts)",
 			
 			//maximum:0.0018,
         },
@@ -812,13 +900,23 @@ function myFunction() {
   }
 
   
+  
   function plotvelocity(){
 	var v= new Array();
 	
 	document.getElementById("plotbucket").style.display="block";
 	document.getElementById("chartContainer").style.display="none";
-	  document.getElementById("chartContainer2").style.display="block";
-var dataPoints=[];
+	document.getElementById("chartContainer2").style.display="block";
+	document.getElementById("slopeline").style.display="block";
+	document.getElementById("btnangl").style.visibility ="visible";
+	document.getElementById("btnlngth").style.visibility ="visible";
+	document.getElementById("btnhpos").style.visibility ="visible";
+	document.getElementById("btnvpos").style.visibility ="visible";
+	  
+	  
+	  
+	  
+var dataPoints=[],downxaxis=[],upxaxis=[];
 
 var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerHTML)));///in cmeter new edit
 	
@@ -868,7 +966,7 @@ var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerH
 		 var cmeter = parseFloat(v[t]/0.691617);
 		var counts = parseFloat(cmeter*2266.288952);
 		  
-		  
+		 
 		  /*var cmcount = parseFloat(2266.28895184);//acc to manual 7.06 cm = 16000 counts, hence 1cm = approx 2266.28895184 counts, hence 10^-3 m = 2266.28895184 counts
 		  var mcount = parseFloat(cmcount * 1000);                                   //hence 1 m = 2266.28895184/10^-3 counts.....or (2266.28895184 * 10^3)counts
 		  var counts = (mcount * v[t]);*/
@@ -876,48 +974,162 @@ var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerH
 		  dataPoints.push({x:(t), y:(counts)});
 		  
 		  
+		  downxaxis.push({x:(t), y:(-100000)});
+		 upxaxis.push({x:(t), y:(100000)});
 	  } 
+	  
+	  
 	  
 	  var chart = new CanvasJS.Chart("chartContainer2",
     {
        
 	  title:{
-      text: "Velocity vs. Time plot"
+      text: "Velocity vs. Time Plot"
 	  
       },
+	  toolTip: {
+    fontColor: "black",
+ },
+	  axisX:[
 	  
-	  axisX:{
+	  {
         interlacedColor: "#D9D9DA",
-        title: "Time(Sec)"
+        title: "Time (sec)"
       },
-	  axisY: {
-            title: "Velocity Curves",
-			
-			//maximum:0.0018,
-        },
-      data: [
-      {        
-        type: "line",
-		color:"black",
-        dataPoints:dataPoints
+	  {/////input y axis invisible
+			gridThickness: 0,
+    tickLength: 0,
+    lineThickness: 0,
+    labelFormatter: function(){
+      return " ";}
+	  
+		}
+		],
 		
-      }
-      ]
+		axisX2: {
+        title: "",
+		gridThickness: 0,
+    tickLength: 0,
+    lineThickness: 0,
+    labelFormatter: function(){
+      return " ";}
+      },		
+		
+	  axisY:[ 
+	  {
+            title: "Velocity (Encoder counts/sec)",
+			minimum:-100000,
+			maximum:100000,
+			
+        },
+		/* {/////input y axis invisible
+			gridThickness: 0,
+    tickLength: 0,
+    lineThickness: 0,
+    labelFormatter: function(){
+      return " ";}
+	  
+		} */
+		],
+      data: [
+      { 
+		 axisXType: "primary", 
+        type: "spline",
+		color:"black",
+        dataPoints:dataPoints		
+      },
+	  {
+		 axisXType: "primary", 
+        type: "line",
+		color:"#D8D8D8",
+		 markerSize: 2,
+        dataPoints:downxaxis
+	  },
+	  {
+		 axisXType: "secondary", 
+        type: "line",
+		color:"#D8D8D8",
+		 markerSize: 2,
+        dataPoints:upxaxis
+	  }
+	  
+		],
+      
     });
 
     chart.render();
+	
+	
 	document.getElementById("exportVelocityChart").addEventListener("click",function(){
 	chart.exportChart({format: "jpg"})});
   } 
+	var pos = 10;  
+	var countL = 0;  
+	function moveL(){
+	countL++;
+		
+	document.getElementById('slopeline').style.left = (pos+countL) + '%';	
+		
+	}  
+	function moveR(){
+	countL--;
+		
+	document.getElementById('slopeline').style.left = (pos+countL) + '%';	
+		
+	}   
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
+	var posT = 20;  
+	var countT = 0;  
+	function moveT(){
+	countT++;
+		
+	document.getElementById('slopeline').style.top = (posT+countT) + '%';	
+		
+	}  
+	function moveD(){
+	countT--;
+		
+	document.getElementById('slopeline').style.top = (posT+countT) + '%';	
+		
+	}    
+	
+	var angle = 0;	
+	function rotateLine(){
+	angle++;
+	var deg = angle*4;
+	//alert(deg);
+	
+	var obj = document.getElementById('slopeline');
+	
+	obj.style.transform ="rotate("+deg+"deg)";
+	//obj.style.transformOrigin ="49.8% 51%";	
+		
+	}  
+	function rotateLineRev(){
+	angle--;
+	var deg = angle*4;
+	//alert(deg);
+	
+	var obj = document.getElementById('slopeline');
+	
+	obj.style.transform ="rotate("+deg+"deg)";
+	//obj.style.transformOrigin ="49.8% 51%";	
+		
+	}    
+	var length = 80;///slope height  
+	var countH = 0;  
+	function InLine(){
+	countH++;
+		
+	document.getElementById('slopeline').style.height = (length+countH) + '%';	
+		
+	}  
+	function DeLine(){
+	countH--;
+		
+	document.getElementById('slopeline').style.height = (length+countH) + '%';	
+		
+	}    
 	  
 	  
 	  
@@ -925,17 +1137,25 @@ var ipvalue = parseFloat(Math.abs(Number(document.getElementById('range').innerH
   
 
 function graph(){
-if( document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('position').checked==true){
+if( document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('position').checked==true && document.getElementById('stv').value==0 && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('dt').value==3000 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+
 plotposition();
 document.getElementById('exportPositionChart').style.display="block";
 document.getElementById('exportVelocityChart').style.display="none";
+document.getElementById('cala1').disabled=false;
+	
 }
-else if(document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('velocity').checked==true){
+else if(document.getElementById('olstep').checked==true && document.getElementById('step').checked==true && document.getElementById('velocity').checked==true && document.getElementById('stv').value==2 && document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('dt').value==75 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+	
 plotvelocity();
 document.getElementById('exportVelocityChart').style.display="block";
 document.getElementById('exportPositionChart').style.display="none";
+document.getElementById('cala1').disabled=false;
 }
-
+else{
+		alert('Follow the instructions. Check the values of  Step Size, Dwell Time, Number of reps and Sample Period.');
+		document.getElementById('cala1').disabled=true;
+	}
 }
 
 function show_WDBox(){
@@ -964,7 +1184,7 @@ document.getElementById('K').value= '1372.993';
 document.getElementById('wn1').value= '20.94';
 document.getElementById('wn2').value= '22.84';
 document.getElementById('zeta').value= '0.05865';*/
-
+if(document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('stv').value==0 && document.getElementById('dt').value==3000 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
 //calculation for mass 1///
 var m1 = parseFloat(document.getElementById('mass1').value);
  var mc = parseFloat(0.77);
@@ -995,6 +1215,8 @@ var TM2 =parseFloat(m2+mc);
   var zetaAvg = 0.5* (zeta1Avg + zeta2Avg);
   
   //final calculation show//
+  //var mc_calc = (parseFloat(parseFloat(m1 * wn12) - parseFloat(m2 * wn22))/ (parseFloat(wn22 - wn12)));
+  //var k_calc = parseFloat(wn22 * parseFloat(m2 + mc_calc));
   
   document.getElementById('MC').value= '0.77';
 document.getElementById('K').value= keq;
@@ -1025,8 +1247,10 @@ document.getElementById('wn2').value= wn2;
 	  var thetaradian = parseFloat(Math.acos(theta)*Math.PI/180);
 	  var wd = parseFloat(wn2 * zetad2);*/
 
-
-
+}
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}
 
 }
 //////Gain Calculation///////////////
@@ -1039,9 +1263,11 @@ document.getElementById('GainBox').style.display="none";
 }
 
 function SimulateGain(){
+	if(document.getElementById('dt').value!=0 && document.getElementById('rep').value!=0 && document.getElementById('servo').value!=0 && document.getElementById('stv').value==2 && document.getElementById('dt').value==75 && document.getElementById('rep').value<=3 && document.getElementById('servo').value==2){
+
 	
-var ac1 = parseFloat(document.getElementById('ac1').value);
-var ac2 = parseFloat(document.getElementById('ac2').value);	
+var ac1 = Math.abs(parseFloat(document.getElementById('ac1').value));
+var ac2 = Math.abs(parseFloat(document.getElementById('ac2').value));	
 	
 	var acavg = parseFloat((ac1+ac2)/2);
 	
@@ -1050,13 +1276,15 @@ var ac2 = parseFloat(document.getElementById('ac2').value);
 	
 	var mfactor= parseFloat(parseFloat(2.086* acavg)/2);
 	
-	var khw = parseFloat(mfactor *kc *ks);
+	var khw = Math.abs(parseFloat(mfactor *kc));
 	
 	document.getElementById('acavg').value= acavg;
 	document.getElementById('hwgain').value = khw;
+	}
 	
-	
-	
+else{
+		alert('Follow the instructions. Check the values of Step Size, Dwell Time, Number of reps and Sample Period.');
+	}	
 	
 }
 
@@ -1099,11 +1327,18 @@ function drag(ev) {
 
 function drop(ev) {
 	 
-  ev.preventDefault();
+  /* ev.preventDefault();
  
   var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
+  ev.target.appendChild(document.getElementById(data)); */
+  
+  var _target = $("#" + ev.target.id);
+  var data = ev.dataTransfer.getData("text");
+  
+  
   if(data == "drag1" && ev.target.id =="div1"){
+	 ev.preventDefault(); 
+	 ev.target.appendChild(document.getElementById(data));  
 	  //green();
 	document.getElementById("MASS(kg)").options[1].selected = 'selected';
      imchange();
@@ -1114,7 +1349,12 @@ function drop(ev) {
 	 document.getElementById('drag1').style.height = 100 +"%";
  } 
  
+ 
+ 
  else if( data == "drag2" && ev.target.id =="div2"){
+	 ev.preventDefault(); 
+	 ev.target.appendChild(document.getElementById(data));  
+	 
 	document.getElementById("MASS(kg)").options[2].selected = 'selected';
      imchange();
 	 document.getElementById('drag2').style.position = "absolute";
@@ -1124,6 +1364,9 @@ function drop(ev) {
 	 document.getElementById('drag2').style.height = 100 +"%";
  } 
  else if( data == "drag3" && ev.target.id =="div3"){
+	 ev.preventDefault(); 
+	 ev.target.appendChild(document.getElementById(data));  
+	 
 	document.getElementById("MASS(kg)").options[3].selected = 'selected';
      imchange();
 	 document.getElementById('drag3').style.position = "absolute";
@@ -1133,6 +1376,9 @@ function drop(ev) {
 	 document.getElementById('drag3').style.height = 100 +"%";
  }
  else if( data == "drag4" && ev.target.id =="div4"){
+	 ev.preventDefault(); 
+	 ev.target.appendChild(document.getElementById(data));  
+	 
 	document.getElementById("MASS(kg)").options[4].selected = 'selected';
      imchange();
 	 document.getElementById('drag4').style.position = "absolute";
@@ -1141,6 +1387,11 @@ function drop(ev) {
 	 document.getElementById('drag4').style.width = 93 +"%";
 	 document.getElementById('drag4').style.height = 100 +"%";
  }
+ 
+ else if((data == "drag1" && ev.target.id !="div1") || (data == "drag2" && ev.target.id !="div2") || (data == "drag3" && ev.target.id !="div3") || (data == "drag4" && ev.target.id !="div4")){
+	 ev.preventDefault(); 
+	alert('Place weights properly');
+ } 
  
 }
 
@@ -1183,7 +1434,9 @@ div.style.borderColor="green";
 div.style.borderWidth="3px";
 }*/
 
-
+function redi(){
+	alert('Click on Connect Dashpot button to perform the simulation with dashpot connected then do necessary calculations.');
+}
 
 
 
